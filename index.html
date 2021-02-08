@@ -22,6 +22,37 @@
         margin-left: auto;
         margin-right: auto;
         }
+        .image {
+        opacity: 1;
+        display: block;
+        transition: .8s ease;
+        backface-visibility: hidden;
+        }
+        td:hover .image {
+        opacity: 0.5;
+        transition: 1s ease;
+        transition-timing-function: linear;
+        }
+
+        table:hover .mid{
+        opacity: 0;
+        }
+
+        td:hover .mid{
+        opacity: 1;
+        }
+
+        td .mid{
+        transition: 0.5s ease;
+        opacity: 0;
+        position: relative;
+        bottom: 200px;
+        text-align: center;
+        
+        background-color: #e2da0f;
+        color: black;
+        font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -43,25 +74,50 @@
 
 <main>
     <table class="products">
-        <tr>
-        <th>Fruits and Vegetables</th>
-        <th>Dairy products</th>
-        <th>Meat & Poultry</th>
+    <tr>
+        <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/bananas.jpg"><div class="mid">
+            <div">
+            Fruits and Vegetables
+            </div>
+        </div>
+        </td>
+        <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/dairy.jpg">
+        <div class="mid">
+            <div>
+            Dairy products
+            </div>
+        </div>
+        </td>
+        <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/meatcrop.jpg">
+        <div class="mid">
+            <div>
+            Meat & Poultry
+            </div>
+        </div>
+        </td>
     </tr>
     <tr>
-        <td><img href="" width="50%" height="400px" src="./assets/imgs/bananas.jpg"></td>
-        <td><img href="" width="50%" height="400px" src="./assets/imgs/dairy.jpg"></td>
-        <td><img href="" width="300px" height="400px" src="./assets/imgs/meatcrop.jpg"></td>
-    </tr>
-    <tr>
-        <th>Bread & Bakery products</th>
-        <th>Fish & Seafood</th>
-        <th>Frozen Foods</th>
-    </tr>
-    <tr>
-        <td><img href="" width="50%" height="400px" src="./assets/imgs/bread.jpg"></td>
-        <td><img href="" width="50%" height="400px" src="./assets/imgs/fish.jpg"></td>
-        <td><img href="" width="300px" height="400px" src="./assets/imgs/frozen.jpg"></td>
+        <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/bread.jpg">
+        <div class="mid">
+            <div>
+            Bread & Bakery products
+            </div>
+        </div>
+        </td>
+        <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/fish.jpg">
+        <div class="mid">
+            <div>
+            Fish & Seafood
+            </div>
+        </div>
+        </td>
+        <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/frozen.jpg">
+        <div class="mid">
+            <div>
+            Frozen Foods
+            </div>
+        </div>
+        </td>
     </tr>
     </table>
     
