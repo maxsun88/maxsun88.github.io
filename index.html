@@ -56,27 +56,67 @@
     </style>
 </head>
 <body>
+<div class="super_container">
+    <header class="fixed-top header">
+        <div class="top_bar row justify-content-end bg-dark">
+            <div class="top_bar_user col-2">
+                <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
+                <div><a class="text-light" href="#">Register</a></div>
+                <div><a class="text-light" href="#">Sign in</a></div>
+            </div>
+        </div>
 
-<header class="site-header sticky-top py-1">
-    <nav class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2" href="#" aria--mlabel="Product">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-        </a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Snack</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
-    </nav>
-</header>
+        <div class="header_main bg-light">
+            <div class="container">
+                <div class="row">
+                    <!--Logo -->
+                    <div class="col-lg-2 col-sm-3 col-3 order-1">
+                        <div class="logo_container">
+                            <a class="navbar-brand" href="#">
+                                <img src="assets/imgs/logo.png" height="70" alt="">
+                            </a>
+                        </div>
+                    </div> <!-- Search -->
+                    <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                        <div class="header_search">
+                            <div class="header_search_content">
+                                <div class="header_search_form_container">
+                                    <form action="#" class="header_search_form clearfix">
+                                        <input type="search" required="required" class="header_search_input" placeholder="Search for products...">
+                                        <button type="submit" class="header_search_button trans_300" value="Submit"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918770/search.png" alt=""></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Wishlist -->
+                    <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+                        <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                            <div class="cart">
+                                <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                                    <div class="cart_icon">
+                                        <img src="assets/imgs/icons/002-basket.png" alt="">
+                                        <div class="cart_count"><span>3</span></div>
+                                    </div>
+                                    <div class="cart_content">
+                                        <div class="cart_text"><a href="#">Cart</a></div>
+                                        <div class="cart_price">$73.69</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Main Navigation -->
+
+    </header>
+</div>
 
 <main>
     <table class="products">
     <tr>
         <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/bananas.jpg"><div class="mid">
-            <div">
+            <div>
             Fruits and Vegetables
             </div>
         </div>
@@ -172,6 +212,503 @@
 
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Product example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style type="text/css">
+        table.products
+        {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .image {
+            opacity: 1;
+            display: block;
+            transition: .8s ease;
+            backface-visibility: hidden;
+        }
+        td:hover .image {
+            opacity: 0.5;
+            transition: 1s ease;
+            transition-timing-function: linear;
+        }
+
+        table:hover .mid{
+            opacity: 0;
+        }
+
+        td:hover .mid{
+            opacity: 1;
+        }
+
+        td .mid{
+            transition: 0.5s ease;
+            opacity: 0;
+            position: relative;
+            bottom: 200px;
+            text-align: center;
+
+            background-color: #e2da0f;
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="super_container">
+    <header class="fixed-top header">
+        <div class="top_bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex flex-row">
+                        <div class="top_bar_contact_item">
+                            <div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918577/phone.png" alt=""></div>+91 9823 132 111
+                        </div>
+                        <div class="top_bar_contact_item">
+                            <div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918597/mail.png" alt=""></div><a href="mailto:fastsales@gmail.com">contact@bbbootstrap.com</a>
+                        </div>
+                        <div class="top_bar_content ml-auto">
+                            <div class="top_bar_menu">
+                                <ul class="standard_dropdown top_bar_dropdown">
+                                    <li> <a href="#">English<i class="fas fa-chevron-down"></i></a>
+                                        <ul>
+                                            <li><a href="#">Italian</a></li>
+                                            <li><a href="#">Spanish</a></li>
+                                            <li><a href="#">Japanese</a></li>
+                                        </ul>
+                                    </li>
+                                    <li> <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
+                                        <ul>
+                                            <li><a href="#">EUR Euro</a></li>
+                                            <li><a href="#">GBP British Pound</a></li>
+                                            <li><a href="#">JPY Japanese Yen</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top_bar_user">
+                                <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
+                                <div><a href="#">Register</a></div>
+                                <div><a href="#">Sign in</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_main bg-light">
+            <div class="container">
+                <div class="row">
+                    <!--Logo -->
+                    <div class="col-lg-2 col-sm-3 col-3 order-1">
+                        <div class="logo_container">
+                            <a class="navbar-brand" href="#">
+                                <img src="assets/imgs/logo.png" height="70" alt="">
+                            </a>
+                        </div>
+                    </div> <!-- Search -->
+                    <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                        <div class="header_search">
+                            <div class="header_search_content">
+                                <div class="header_search_form_container">
+                                    <form action="#" class="header_search_form clearfix">
+                                        <input type="search" required="required" class="header_search_input" placeholder="Search for products...">
+                                        <button type="submit" class="header_search_button trans_300" value="Submit"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918770/search.png" alt=""></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Wishlist -->
+                    <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+                        <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                            <div class="cart">
+                                <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                                    <div class="cart_icon">
+                                        <img src="assets/imgs/icons/002-basket.png" alt="">
+                                        <div class="cart_count"><span>3</span></div>
+                                    </div>
+                                    <div class="cart_content">
+                                        <div class="cart_text"><a href="#">Cart</a></div>
+                                        <div class="cart_price">$73.69</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Main Navigation -->
+    </header>
+</div>
+
+<main>
+    <table class="products">
+        <tr>
+            <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/bananas.jpg"><div class="mid">
+                <div>
+                    Fruits and Vegetables
+                </div>
+            </div>
+            </td>
+            <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/dairy.jpg">
+                <div class="mid">
+                    <div>
+                        Dairy products
+                    </div>
+                </div>
+            </td>
+            <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/meatcrop.jpg">
+                <div class="mid">
+                    <div>
+                        Meat & Poultry
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/bread.jpg">
+                <div class="mid">
+                    <div>
+                        Bread & Bakery products
+                    </div>
+                </div>
+            </td>
+            <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/fish.jpg">
+                <div class="mid">
+                    <div>
+                        Fish & Seafood
+                    </div>
+                </div>
+            </td>
+            <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/frozen.jpg">
+                <div class="mid">
+                    <div>
+                        Frozen Foods
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</main>
+
+<footer class="container py-5">
+    <div class="row">
+        <div class="col-12 col-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+            <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Cool stuff</a></li>
+                <li><a class="link-secondary" href="#">Random feature</a></li>
+                <li><a class="link-secondary" href="#">Team feature</a></li>
+                <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+                <li><a class="link-secondary" href="#">Another one</a></li>
+                <li><a class="link-secondary" href="#">Last time</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Resource name</a></li>
+                <li><a class="link-secondary" href="#">Resource</a></li>
+                <li><a class="link-secondary" href="#">Another resource</a></li>
+                <li><a class="link-secondary" href="#">Final resource</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Business</a></li>
+                <li><a class="link-secondary" href="#">Education</a></li>
+                <li><a class="link-secondary" href="#">Government</a></li>
+                <li><a class="link-secondary" href="#">Gaming</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Team</a></li>
+                <li><a class="link-secondary" href="#">Locations</a></li>
+                <li><a class="link-secondary" href="#">Privacy</a></li>
+                <li><a class="link-secondary" href="#">Terms</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Product example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style type="text/css">
+        table.products
+        {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .image {
+            opacity: 1;
+            display: block;
+            transition: .8s ease;
+            backface-visibility: hidden;
+        }
+        td:hover .image {
+            opacity: 0.5;
+            transition: 1s ease;
+            transition-timing-function: linear;
+        }
+
+        table:hover .mid{
+            opacity: 0;
+        }
+
+        td:hover .mid{
+            opacity: 1;
+        }
+
+        td .mid{
+            transition: 0.5s ease;
+            opacity: 0;
+            position: relative;
+            bottom: 200px;
+            text-align: center;
+
+            background-color: #e2da0f;
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="super_container">
+    <header class="fixed-top header">
+        <div class="top_bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex flex-row">
+                        <div class="top_bar_contact_item">
+                            <div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918577/phone.png" alt=""></div>+91 9823 132 111
+                        </div>
+                        <div class="top_bar_contact_item">
+                            <div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918597/mail.png" alt=""></div><a href="mailto:fastsales@gmail.com">contact@bbbootstrap.com</a>
+                        </div>
+                        <div class="top_bar_content ml-auto">
+                            <div class="top_bar_menu">
+                                <ul class="standard_dropdown top_bar_dropdown">
+                                    <li> <a href="#">English<i class="fas fa-chevron-down"></i></a>
+                                        <ul>
+                                            <li><a href="#">Italian</a></li>
+                                            <li><a href="#">Spanish</a></li>
+                                            <li><a href="#">Japanese</a></li>
+                                        </ul>
+                                    </li>
+                                    <li> <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
+                                        <ul>
+                                            <li><a href="#">EUR Euro</a></li>
+                                            <li><a href="#">GBP British Pound</a></li>
+                                            <li><a href="#">JPY Japanese Yen</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top_bar_user">
+                                <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
+                                <div><a href="#">Register</a></div>
+                                <div><a href="#">Sign in</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_main bg-light">
+            <div class="container">
+                <div class="row">
+                    <!--Logo -->
+                    <div class="col-lg-2 col-sm-3 col-3 order-1">
+                        <div class="logo_container">
+                            <a class="navbar-brand" href="#">
+                                <img src="assets/imgs/logo.png" height="70" alt="">
+                            </a>
+                        </div>
+                    </div> <!-- Search -->
+                    <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                        <div class="header_search">
+                            <div class="header_search_content">
+                                <div class="header_search_form_container">
+                                    <form action="#" class="header_search_form clearfix">
+                                        <input type="search" required="required" class="header_search_input" placeholder="Search for products...">
+                                        <button type="submit" class="header_search_button trans_300" value="Submit"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918770/search.png" alt=""></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Wishlist -->
+                    <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+                        <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                            <div class="cart">
+                                <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                                    <div class="cart_icon">
+                                        <img src="assets/imgs/icons/002-basket.png" alt="">
+                                        <div class="cart_count"><span>3</span></div>
+                                    </div>
+                                    <div class="cart_content">
+                                        <div class="cart_text"><a href="#">Cart</a></div>
+                                        <div class="cart_price">$73.69</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Main Navigation -->
+    </header>
+</div>
+
+<main>
+    <table class="products">
+        <tr>
+            <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/bananas.jpg"><div class="mid">
+                <div>
+                    Fruits and Vegetables
+                </div>
+            </div>
+            </td>
+            <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/dairy.jpg">
+                <div class="mid">
+                    <div>
+                        Dairy products
+                    </div>
+                </div>
+            </td>
+            <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/meatcrop.jpg">
+                <div class="mid">
+                    <div>
+                        Meat & Poultry
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/bread.jpg">
+                <div class="mid">
+                    <div>
+                        Bread & Bakery products
+                    </div>
+                </div>
+            </td>
+            <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/fish.jpg">
+                <div class="mid">
+                    <div>
+                        Fish & Seafood
+                    </div>
+                </div>
+            </td>
+            <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/frozen.jpg">
+                <div class="mid">
+                    <div>
+                        Frozen Foods
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</main>
+
+<footer class="container py-5">
+    <div class="row">
+        <div class="col-12 col-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+            <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Cool stuff</a></li>
+                <li><a class="link-secondary" href="#">Random feature</a></li>
+                <li><a class="link-secondary" href="#">Team feature</a></li>
+                <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+                <li><a class="link-secondary" href="#">Another one</a></li>
+                <li><a class="link-secondary" href="#">Last time</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Resource name</a></li>
+                <li><a class="link-secondary" href="#">Resource</a></li>
+                <li><a class="link-secondary" href="#">Another resource</a></li>
+                <li><a class="link-secondary" href="#">Final resource</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Business</a></li>
+                <li><a class="link-secondary" href="#">Education</a></li>
+                <li><a class="link-secondary" href="#">Government</a></li>
+                <li><a class="link-secondary" href="#">Gaming</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Team</a></li>
+                <li><a class="link-secondary" href="#">Locations</a></li>
+                <li><a class="link-secondary" href="#">Privacy</a></li>
+                <li><a class="link-secondary" href="#">Terms</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+</body>
+</html>
 
 
 </body>
