@@ -13,46 +13,9 @@
 
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <style type="text/css">
-       table.products
-        {
-        margin-left: auto;
-        margin-right: auto;
-        }
-        .image {
-        opacity: 1;
-        display: block;
-        transition: .8s ease;
-        backface-visibility: hidden;
-        }
-        td:hover .image {
-        opacity: 0.5;
-        transition: 1s ease;
-        transition-timing-function: linear;
-        }
-
-        table:hover .mid{
-        opacity: 0;
-        }
-
-        td:hover .mid{
-        opacity: 1;
-        }
-
-        td .mid{
-        transition: 0.5s ease;
-        opacity: 0;
-        position: relative;
-        bottom: 200px;
-        text-align: center;
-        
-        background-color: #e2da0f;
-        color: black;
-        font-size: 20px;
-        }
+    <link href="assets/Home_Page/style.css" rel="stylesheet">
     </style>
 </head>
 <body>
@@ -73,7 +36,7 @@
                     <div class="col-lg-2 col-sm-3 col-3 order-1">
                         <div class="logo_container">
                             <a class="navbar-brand" href="#">
-                                <img src="assets/imgs/logo.png" height="70" alt="">
+                                <img src="assets/Home_Page/imgs/logo.png" height="70" alt="">
                             </a>
                         </div>
                     </div> <!-- Search -->
@@ -94,7 +57,7 @@
                             <div class="cart">
                                 <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                     <div class="cart_icon">
-                                        <img src="assets/imgs/icons/002-basket.png" alt="">
+                                        <img src="assets/Home_Page/imgs/icons/002-basket.png" alt="">
                                         <div class="cart_count"><span>3</span></div>
                                     </div>
                                     <div class="cart_content">
@@ -129,22 +92,23 @@
 </div>
 
 <main>
-    <table class="products">
+  <div class="products">
+    <table>
     <tr>
-        <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/bananas.jpg"><div class="mid">
+        <td><a href="#"></a><img class="image" width="267px" height="400px" src="./assets/Home_Page/imgs/bananas.jpg"><div class="mid">
             <div>
             Fruits and Vegetables
             </div>
         </div>
         </td>
-        <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/dairy.jpg">
+        <td><a href="#"></a><img class="image" width="267px" height="400px" src="./assets/Home_Page/imgs/dairy.jpg">
         <div class="mid">
             <div>
             Dairy products
             </div>
         </div>
         </td>
-        <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/meatcrop.jpg">
+        <td><a href="#"></a><img class="image" width="267px" height="400px" src="./assets/Home_Page/imgs/meatcrop.jpg">
         <div class="mid">
             <div>
             Meat & Poultry
@@ -153,21 +117,21 @@
         </td>
     </tr>
     <tr>
-        <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/bread.jpg">
+        <td><a href="#"></a><img class="image" width="267px" height="400px" src="./assets/Home_Page/imgs/bread.jpg">
         <div class="mid">
             <div>
             Bread & Bakery products
             </div>
         </div>
         </td>
-        <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/fish.jpg">
+        <td><a href="#"></a><img class="image" width="267px" height="400px" src="./assets/Home_Page/imgs/fish.jpg">
         <div class="mid">
             <div>
             Fish & Seafood
             </div>
         </div>
         </td>
-        <td><img href="" class="image" width="267px" height="400px" src="./assets/imgs/frozen.jpg">
+        <td><a href="#"></a><img class="image" width="267px" height="400px" src="./assets/Home_Page/imgs/frozen.jpg">
         <div class="mid">
             <div>
             Frozen Foods
@@ -176,7 +140,9 @@
         </td>
     </tr>
     </table>
-    
+  </div>
+
+
 </main>
 
 <footer class="container py-5">
@@ -225,4 +191,3 @@
         </div>
     </div>
 </footer>
-
