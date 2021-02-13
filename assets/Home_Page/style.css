@@ -1342,37 +1342,36 @@ select option {
 
 .products table
 {
-margin-left: auto;
-margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-.prodcuts .image {
-opacity: 1;
-display: block;
-transition: .8s ease;
-backface-visibility: hidden;
+.products td, th {
+  padding: 20px;
 }
-.products td:hover .image {
-opacity: 0.5;
-transition: 1s ease;
-transition-timing-function: linear;
+.products .zoom {
+  opacity: 1;
+  display: block;
+  transition: 1.1s ease;
+  backface-visibility: hidden;
 }
-
-.products:hover .mid{
-opacity: 0;
-}
-
 .products td:hover .mid{
-opacity: 1;
+  transition: 0.5s ease;
+  opacity: 1
 }
-
 .products td .mid{
-transition: 0.5s ease;
-opacity: 0;
-position: relative;
-bottom: 200px;
-text-align: center;
+  transition: 0.5s ease;
+  opacity: 0.4;
+  position: relative;
+  bottom: 200px;
+  text-align: center;
 
-background-color: #e2da0f;
-color: black;
-font-size: 20px;
+  background-color: #e2da0f;
+  color: black;
+  font-size: 18px;
+}
+.products td, th {
+  transition: transform .4s;
+}
+.products td:hover, .products th:hover {
+  transform: scale(1.1);
 }
