@@ -1,0 +1,240 @@
+body, html {
+    height: 100%;
+}
+
+html {
+    scroll-padding-top: 70px;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+.nav {
+    padding-top: 0px;
+    background: #fff;
+    height: auto;
+    width: 100%;
+    z-index: 150;
+    top: 0px;
+    position: sticky;
+    box-shadow: 0 2px 3px rgba(0,0,0,.4);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(216, 213, 213, 0.562);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.page-wrapper {
+    height: 100%;
+    display: table;
+}
+
+.page-wrapper .page-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.element-wrapper {
+    width: 180px;
+    padding: 7.5px;
+    margin: 7.5px auto;
+    background-color: #fff;
+}
+
+@media (max-width: 495.5px) {
+.element-wrapper {
+    width: 172.5px;
+}
+}
+
+@media (max-width: 383.5px) {
+.element-wrapper {
+    width: 145px;
+    margin: 15px auto;
+}
+}
+
+.element-wrapper:hover .add-to-cart {
+    left: 50%;
+}
+
+.element-wrapper:hover .img {
+    filter: blur(3px);
+    opacity: 0.5;
+}
+
+.element-wrapper:hover .info-inner {
+    bottom: 77.5px;
+}
+
+.element-wrapper:hover .a-size {
+    bottom: 25px;
+    opacity: 1;
+}
+
+.element-wrapper .box-down {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.element-wrapper .box-up {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+    
+.h-bg {
+    width: 660px;
+    height: 100%;
+    background-color: #e2da0f;
+    position: absolute;
+}
+
+.info-inner {
+    transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    position: absolute;
+    width: 100%;
+    bottom: 12.5px;
+}
+
+.info-inner .p-name,.info-inner .p-addinfo {
+    display: block;
+    font-family: 'Rubik', sans-serif;
+}
+
+.info-inner .p-name {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    color: #252525;
+}
+
+.info-inner .p-addinfo {
+    font-family: 'Rubik', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #8c8c8c;
+}
+
+/* Style of the additional information */
+.a-size {
+    transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    position: absolute;
+    width: 100%;
+    bottom: -20px;
+    font-family: 'Rubik', sans-serif;
+    color: #828282;
+    opacity: 0;
+}
+
+/* Display for add-to-cart and its font */
+.cart {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+}
+
+/* CSS for price animation */
+.cart .price {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #575555;
+}
+
+/* CSS for add-to-cart animation */
+.cart .add-to-cart {
+    transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    transition-delay: 100ms;
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 150%;
+    transform: translate(-50%, -50%);
+}
+
+/* Text at the bottom of each cell for "ADD TO CART" */
+.cart .add-to-cart .txt {
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Create four equal columns that sits next to each other */
+.row {
+    content: "";
+    clear: both;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+/* Pagination at the bottom of the page*/
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #e2da0f;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
