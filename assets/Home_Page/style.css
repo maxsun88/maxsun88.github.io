@@ -366,21 +366,6 @@ section {
   height: 80px
 }
 
-.logo {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%)
-}
-
-.logo a {
-  font-size: 36px;
-  font-weight: 500;
-  color: #0e8ce4
-}
-
 .header_search {
   height: 90px
 }
