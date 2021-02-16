@@ -1339,6 +1339,24 @@ select option {
   }
 }
 
+
+
+.products tr {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products th, .products td{
+  flex: 25%;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .products tr{
+    flex-direction: column;
+  }
+}
+
 .products a
 {
   color: black;
