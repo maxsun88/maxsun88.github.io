@@ -33,21 +33,26 @@
 		</div>
 		<div class="col-sm-9">
 			<h4> $1.90 </h4> <br />
-			<p> Product description </p>
+			<p> <b>Product description</b> </p>
         2 % Milk
         <br>
         Milk from our local cows, freshly prepared.
-			<hr />
-			<p> More product details </p>
-      (1L)
-      $0.20 /100ml.
+			<hr/>
+			<a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                More description
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+							(1L)
+							$0.20 /100ml.
+            </div>
 		</div>
 	</div>
 	<br>
 	<form class="form-inline" action="">
 		<label for="quantity" class="mr-3 mb-2">Quantity:</label>
-		<input type="number" class="form-control mr-3 mb-2" id="quantity" value="0" name="quantity">
-		<input type="button" class="btn btn-outline-secondary mb-2" value="Add to cart" />
+		<input type="number" min="1"class="form-control mr-3 mb-2" id="quantity" value="1" name="quantity">
+		<input type="button" class="btn btn-outline-dark mb-2" value="Add to cart" />
 	</form>
 	<br/> <br/>
 	</div>
