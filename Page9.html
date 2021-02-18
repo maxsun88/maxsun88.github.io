@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>List of users</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="assets/Backstore/backstore.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Sanitas Groceries</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>List of users</p>
+            <li>
+                <a href="#">Products</a>
+            </li>
+            <li>
+                <a href="#">Users</a>
+            </li>
+            <li>
+                <a href="#">Orders</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Users Management
+                        </div>
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between my-3">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Customers</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Employees</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Managers</a>
+                                    </li>
+                                </ul>
+
+                                <form class="d-flex">
+                                    <input class="form-control me-2" style="width: 300px" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </div>
+
+                            <table class="table table-bordered table-hover table-sm">
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Account number</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">E-mail</th>
+                                    <th scope="col">Country of Residence</th>
+                                    <th scope="col">Date of birth</th>
+                                    <th scope="col">Address</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">C254028459</th>
+                                    <td>William Rockata</td>
+                                    <td>will1964@hotmail.com</td>
+                                    <td>Canada</td>
+                                    <td>February 18, 1964</td>
+                                    <td>3577th Avenue, Strathmore, AB, T0J 3H0</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C436962773</th>
+                                    <td>Beth Blackman</td>
+                                    <td>bethUnderscore2004@yahoo.com</td>
+                                    <td>Canada</td>
+                                    <td>May 9, 1964</td>
+                                    <td>4356 St Marys Rd, Winnipeg, MB, R3C 0C4</td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C269634377</th>
+                                    <td>Gemma Torrance</td>
+                                    <td>GemmaAtYahooDotCom@hotmail.com</td>
+                                    <td>Canada</td>
+                                    <td>October 3, 1964</td>
+                                    <td>4356 St Marys Rd, Winnipeg, MB, R3C 0C4</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C377963426</th>
+                                    <td>Mark Wilson</td>
+                                    <td>mark_AllOneWord@yahoo.com</td>
+                                    <td>Canada</td>
+                                    <td>February 13, 1972</td>
+                                    <td>753 De la Providence Avenue, Buckingham, QC, J8L 1P1</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C377269634</th>
+                                    <td>Zack Platt</td>
+                                    <td>plattWithThreeTs@yahoo.com</td>
+                                    <td>United States</td>
+                                    <td>July 22, 1981</td>
+                                    <td>530 West Street, Grand Rapids, MI, 49508</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C115928475</th>
+                                    <td>Steven Parks</td>
+                                    <td>stevenparks@gmail.com</td>
+                                    <td>Canada</td>
+                                    <td>April 5, 1982</td>
+                                    <td>3871 Township Rd, Lloydminster, AB, T9V 0L9</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C065914137</th>
+                                    <td>Kimberly Randall</td>
+                                    <td>kangaroogirl201@gmail.com</td>
+                                    <td>Canada</td>
+                                    <td>May 26, 1991</td>
+                                    <td>5012 Reserve St, Carleton Place, ON, K0G 1K0</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C538104019</th>
+                                    <td>Maud Blunder</td>
+                                    <td>theblunder@hotmail.com</td>
+                                    <td>Canada</td>
+                                    <td>November 10, 1992</td>
+                                    <td>4232 Boulevard Laflèche, St Georges, QC, G5Y 1X7
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C512081605</th>
+                                    <td>Sandie Parker</td>
+                                    <td>sandie-at-work@hotmail.com</td>
+                                    <td>Canada</td>
+                                    <td>February 3, 1997</td>
+                                    <td>3811 rue des Églises Est, Fugereville, QC, J0Z 2A0</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C514786358</th>
+                                    <td>Richard Sparkle</td>
+                                    <td>teamleader57@hotmail.com</td>
+                                    <td>United States</td>
+                                    <td>October 18, 1997</td>
+                                    <td>4748 West Fork Street, Helena, MT, 59601</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C633835830</th>
+                                    <td>Heather Kowalski</td>
+                                    <td>heatherkowa@gmail.com</td>
+                                    <td>Canada</td>
+                                    <td>December 6, 2000</td>
+                                    <td>2403 Acton Avenue, Toronto, ON, M3H 4J1</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">C230013641</th>
+                                    <td>Albert Rabbit</td>
+                                    <td>albert375@hotmail.com</td>
+                                    <td>Canada</td>
+                                    <td>January 7, 2000</td>
+                                    <td>5010 Toy Avenue, Oshawa, ON, L1G 6Z8</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<!--&lt;!&ndash; jQuery Custom Scroller CDN &ndash;&gt;-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>-->
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar, #content').toggleClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
