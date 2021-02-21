@@ -12,10 +12,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <!-- Custom styles for this template -->
     <link href="assets/Page2/stylep2.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function(){
+            $('#our-header').load('header.html');
+            $('#our-footer').load('footer.html');
+        });
+    </script>
 
 <style>
 .banner-image {
-    background-image: url("assets/Page2/imgs/banner_milk.jpg");
+    background-image: url("assets/Page2/imgs/banner_milk_logo.jpg");
     height: 10%;
     background-position: 50% 37%;
     background-repeat: no-repeat;
@@ -39,13 +46,6 @@
     1px 1px #636363;
 }
 </style>
-    <div class="top_bar row justify-content-end bg-dark">
-            <div class="top_bar_user col-2">
-                <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
-                <div><a class="text-light" href="./Sign-up page.html">Register</a></div>
-                <div><a class="text-light" href="./Login page.html">Sign in</a></div>
-            </div>
-        </div>
 
 <div class="banner-image">
     <div class="banner-text">
@@ -63,21 +63,13 @@
 </div>
 
 
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only"></span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
-        </div>
-    </div>
-</nav>
+
 
 </head>
 
 <body>
 <main>
+  <div id="our-header"></div>
     <div class="row">
             <div class="container page-wrapper">
                 <div class="page-inner">

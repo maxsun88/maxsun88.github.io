@@ -51,66 +51,116 @@
                             User Edit
                         </div>
                         <div class="card-body">
-
                             <div class="d-flex justify-content-between my-3">
                               <form>
-                                <div class="form-group">
-                                  <label for="name">User's Name</label>
-                                  <input name="text" class="form-control" placeholder="Jerry Labowski"></input>
-                                </div>
+
                                   <div class="form-group">
-                                    <label for="inputemail">User's Email address</label>
-                                    <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="jerry.labowski@placeholder.com">
+                                    <div class="container">
+                                        <div class="row">
+                                          <div class="col-sm">
+                                            <label for="title">Title</label>
+                                            <select class="form-control" name="title">
+          							                       <option> Mr. </option>
+          							                       <option> Mrs. </option>
+          							                       <option> Miss </option>
+          							                       <option> Ms. </option>
+          						                      </select>
+                                          </div>
+                                          <div class="col-sm">
+                                            <label for="name">Name</label>
+                                            <input name="text" class="form-control" placeholder="Jerry Labowski"></input>
+                                          </div>
+                                          <div class="col-sm">
+                                            <label for="dob">Date of Birth</label>
+                                            <input name="text" id="dob" class="form-control" placeholder="12/20/1993"></input>
+                                          </div>
+                                        </div>
+                                      </div>
                                   </div>
 
-
                                 <div class="form-group">
-                                  <label for="inputpassword">User's Password</label>
-                                  <input type="password" class="form-control" id="inputpassword" placeholder="ILoveSanitasGroceries123">
+                                  <div class="container">
+                                      <div class="row">
+                                        <div class="col-sm">
+                                          <label for="inputemail">Email address</label>
+                                          <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="jerry.labowski@placeholder.com">
+                                        </div>
+                                        <div class="col-sm">
+                                          <label for="inputpassword">Password</label>
+                                          <input type="password" class="form-control" id="inputpassword" placeholder="ILoveSanitasGroceries123">
+                                      </div>
+                                    </div>
                                 </div>
-                              <div class="form-group">
-                                <label for="country">User's Country of Residence</label>
-                                <select name="country" class="form-control">
-                                  <option value="united states">United States</option>
-                                  <option value="canada">Canada</option>
-                                  <option value="mexico">Mexico</option>
-                                  <option value="england">England</option>
-                                  <option value="france">France</option>
-                                  <option value="germany">Germany</option>
-                                  <option value="romania">Romania</option>
-                                  <option value="china">China</option>
-                                  <option value="south_korea">South Korea</option>
-                                  <option value="japan">Japan</option>
-                                  <option value="australia">Australia</option>
-                                </select>
                               </div>
-                              <div class="form-group">
-                                <label for="dob">User's Date of Birth</label>
-                                <input name="text" class="form-control" placeholder="12/20/1993"></input>
-                              </div>
-                              <div class="form-group">
-                                <label for="lang">User's Primary Language</label>
-                                <select name="lang" class="form-control">
-                                  <option value="english">English</option>
-                                  <option value="french">French</option>
-                                  <option value="spanish">Spanish</option>
-                                  <option value="mandarin">Mandarin</option>
-                                  <option value="korean">Korean</option>
-                                  <option value="japanese">Japanese</option>
-                                  <option value="german">German</option>
-                                  <option value="romanian">Romanian</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="address">User's Address</label>
-                                <input type="text" class="form-control" placeholder="555 William Wonka ave.">
 
+                              <div class="form-group">
+                                <div class="container">
+                                    <div class="row">
+                                      <div class="col-sm">
+                                        <label for="country">Country of Residence</label>
+                                        <select name="country" class="form-control">
+                                          <option value="united states">United States</option>
+                                          <option value="canada">Canada</option>
+                                          <option value="mexico">Mexico</option>
+                                          <option value="england">England</option>
+                                          <option value="france">France</option>
+                                          <option value="germany">Germany</option>
+                                          <option value="romania">Romania</option>
+                                          <option value="china">China</option>
+                                          <option value="south_korea">South Korea</option>
+                                          <option value="japan">Japan</option>
+                                          <option value="australia">Australia</option>
+                                        </select>
+                                      </div>
+                                      <div class="col-sm">
+                                        <label for="city">City</label>
+                                        <input name="text" id="city" class="form-control" placeholder="Austin"></input>
+                                      </div>
+                                      <div class="col-sm">
+                                        <label for="address">Address</label>
+                                        <input type="text" id="address" class="form-control" placeholder="555 William Wonka ave.">
+                                      </div>
+                                      <div class="col-sm">
+                                        <label for="postal">Postal Code</label>
+                                        <input type="text" id="postal" class="form-control" placeholder="5A5A5A">
+                                      </div>
+                                    </div>
+                                  </div>
                               </div>
-                                <br>
-                                <button type="submit" class="btn btn-dark">Make Changes</button>
+
+                              <div class="form-group">
+                                <div class="container">
+                                    <div class="row">
+                                      <div class="col-sm">
+                                        <label for="lang">Primary Language</label>
+                                        <select name="lang" class="form-control">
+                                          <option value="english">English</option>
+                                          <option value="french">French</option>
+                                          <option value="spanish">Spanish</option>
+                                          <option value="mandarin">Mandarin</option>
+                                          <option value="korean">Korean</option>
+                                          <option value="japanese">Japanese</option>
+                                          <option value="german">German</option>
+                                          <option value="romanian">Romanian</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                              <br>
+
+                              <div class="form-group">
+                                <div class="container">
+                                    <div class="row">
+                                      <div class="col-sm">
+                                          <button type="submit" class="btn btn-dark">Make Changes</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
                               </form>
                             </div>
-
                         </div>
                     </div>
                 </div>
