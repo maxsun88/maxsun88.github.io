@@ -9,95 +9,213 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		
+
+		<!-- Custom styles for this template -->
+		<link href="assets/Home_Page/style.css" rel="stylesheet">
+		
 	</head>
 	<body>
-	<nav class="navbar navbar-expand-sm bg-light navbar-light">
-    	<div class="container col-sm-6">
-		<a class="navbar-brand" href="#">
-			<img src="https://media.discordapp.net/attachments/799284639524454413/807669276948430878/logo.png" alt="logo" width="120px"/>
-		</a>
-        </div>
-	</nav>
-	
-	<div class="container col-sm-6">
-	
-	<br />
-	<h1> Sign-up </h1> <br />
-	<h4> Personal information </h4> <br />
+
+	<div class="super_container">
+		<!--Header-->
+		<header class="fixed-top header">
+			<div class="container">
+				<div class="top_bar row justify-content-end">
+					<div class="top_bar_user col-2">
+						<div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
+						<div><a href="#">Register</a></div>
+						<div><a href="#">Sign in</a></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="header_main bg-light border-top">
+				<div class="container">
+					<div class="row">
+						<!--Logo -->
+						<div class="col-lg-2 col-sm-3 col-3 order-1">
+							<div class="logo_container">
+								<a class="navbar-brand" href="#">
+									<img src="assets/Home_Page/imgs/logo.png" height="70" alt="">
+								</a>
+							</div>
+						</div> <!-- Search -->
+						<div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+							<div class="header_search">
+								<div class="header_search_content">
+									<div class="header_search_form_container">
+										<form action="#" class="header_search_form clearfix">
+											<input type="search" required="required" class="header_search_input" placeholder="Search for products...">
+											<button type="submit" class="header_search_button trans_300" value="Submit"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918770/search.png" alt=""></button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div> <!-- Wishlist -->
+						<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+							<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+								<div class="cart">
+									<div class="cart_container d-flex flex-row align-items-center justify-content-end">
+										<div class="cart_icon">
+											<img src="assets/Home_Page/imgs/icons/002-basket.png" alt="">
+											<div class="cart_count"><span>0</span></div>
+										</div>
+										<div class="cart_content">
+											<div class="cart_text"><a href="#">Cart</a></div>
+											<div class="cart_price">$0.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- Main Navigation -->
+			<div class="bg-light border-top">
+				<div class="container">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+							<div class="navbar-nav nav_sticky">
+								<a class="nav-item nav-link active" href="#">Home <span class="sr-only"></span></a>
+								<a class="nav-item nav-link" href="#">Aisles</a>
+								<a class="nav-item nav-link" href="#">Flyers</a>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
 		
-		<form action ="">
-			<div class="row mb-4">
-				<div class="col-sm-2"> 
-					<label for="title"> Title: </label> <br /> 
-					<select class="form-control" name="title">
-						<option> Mr. </option>
-						<option> Mrs. </option>
-						<option> Miss </option>
-						<option> Ms. </option>
-					</select> 
-				</div>
-				<div class="col-sm-4" > 
-					<label for="firstName"> First Name: </label> <br /> 
-					<input type = "text" class="form-control" name = "firstName" size="50"/> 
-				</div>
-				<div class="col-sm-6"> 
-					<label for="lastName"> Last Name: </label> <br /> 
-					<input type = "text" class="form-control" name = "lastName" size="50"/> 
-				</div>
-			</div>
-			<div class="row mb-4 mt-4">
-				<div class="col-sm-6"> 
-					<label for="streetAdress"> <div class="text-nowrap"> Street Address: </div> </label> <br /> 
-					<input type = "text" class="form-control" name = "adress" size="50"/> 
-				</div>
-				<div class="col-sm-3"> 
-					<label for="city"> City: </label> <br /> 
-					<input class="form-control" type = "text" name = "city" size="20"/> 
-				</div>
-				<div class="col-sm-3"> 
-					<label for="postalCode"> <div class="text-nowrap"> Postal Code: </div> </label> <br /> 
-					<input type="text" class="form-control"name="postalCode" size="20"/> 
-				</div>
-			</div>
-			
-			
-			<br />
-			<h4> Login information </h4>
-			<br />
-			
-			<div class="row mb-4">
-				<div class="col-sm-6"> 
-					<label for="emailAdress"> <div class="text-nowrap"> Email Address: </div> </label> <br /> 
-					<input type="text" class="form-control" name="emailAdress" size="100"> 
-				</div>
-				<div class="col-sm-6"> 
-					<label for="confirmEmailAdress"> <div class="text-nowrap"> Confirm your Email Address: </div> </label> <br /> 
-					<input type="text" class="form-control" name="confirmEmailAdress" size="100"> 
-				</div>
-			</div>
-			<div class="row mt-4">
-				<div class="col-sm-6"> 
-					<label for="password"> 
-						<a href="javascript:;" data-toggle="popover" data-placement="right" data-trigger="focus" title="Password conditions" data-content="Password must contain ...">Password: </a>
-					</label> <br /> 
-					<input type="password" class="form-control" name="password" size="100"/>
-				</div>
-				<div class="col-sm-6"> 
-					<label for="confirmPassword"> <div class="text-nowrap"> Confirm your Password: </div> </label> <br /> 
-					<input type="password" class="form-control" name="confirmPassword" size="100"/> 
-				</div>
-			</div>
-			<br /> <hr /> <br />
-			<div class="form-check">
-				<label class="form-check-label:">
-					<input type="checkbox" class="form-check-input" value=""> I agree to the terms and conditions.
-				</label>
-			</div> <br />
-			<input type="button" class="btn btn-outline-secondary" value="Submit Information" />
-		</form>
+		<!--Main content-->
+		<div class="container">
 		<br />
+
+		<br /><h2> Sign-up </h3> <br />
+		<h4> Personal information </h4> <br />
+			
+			<form action ="">
+				<div class="row mb-4">
+					<div class="col-sm-2"> 
+						<label for="title"> Title: </label> <br /> 
+						<select class="form-control" name="title">
+							<option> Mr. </option>
+							<option> Mrs. </option>
+							<option> Miss </option>
+							<option> Ms. </option>
+						</select> 
+					</div>
+					<div class="col-sm-4" > 
+						<label for="firstName"> First Name: </label> <br /> 
+						<input type = "text" class="form-control" name = "firstName" size="50"/> 
+					</div>
+					<div class="col-sm-6"> 
+						<label for="lastName"> Last Name: </label> <br /> 
+						<input type = "text" class="form-control" name = "lastName" size="50"/> 
+					</div>
+				</div>
+				<div class="row mb-4 mt-4">
+					<div class="col-sm-6"> 
+						<label for="streetAdress"> <div class="text-nowrap"> Street Address: </div> </label> <br /> 
+						<input type = "text" class="form-control" name = "adress" size="50"/> 
+					</div>
+					<div class="col-sm-3"> 
+						<label for="city"> City: </label> <br /> 
+						<input class="form-control" type = "text" name = "city" size="20"/> 
+					</div>
+					<div class="col-sm-3"> 
+						<label for="postalCode"> <div class="text-nowrap"> Postal Code: </div> </label> <br /> 
+						<input type="text" class="form-control"name="postalCode" size="20"/> 
+					</div>
+				</div>
+				
+				
+				<br />
+				<h4> Login information </h4>
+				<br />
+				
+				<div class="row mb-4">
+					<div class="col-sm-6"> 
+						<label for="emailAdress"> <div class="text-nowrap"> Email Address: </div> </label> <br /> 
+						<input type="text" class="form-control" name="emailAdress" size="100"> 
+					</div>
+					<div class="col-sm-6"> 
+						<label for="confirmEmailAdress"> <div class="text-nowrap"> Confirm your Email Address: </div> </label> <br /> 
+						<input type="text" class="form-control" name="confirmEmailAdress" size="100"> 
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-sm-6"> 
+						<label for="password"> 
+							<a href="javascript:;" data-toggle="popover" data-placement="right" data-trigger="focus" title="Password conditions" data-content="Password must contain ...">Password: </a>
+						</label> <br /> 
+						<input type="password" class="form-control" name="password" size="100"/>
+					</div>
+					<div class="col-sm-6"> 
+						<label for="confirmPassword"> <div class="text-nowrap"> Confirm your Password: </div> </label> <br /> 
+						<input type="password" class="form-control" name="confirmPassword" size="100"/> 
+					</div>
+				</div>
+				<br /> <hr /> <br />
+				<div class="form-check">
+					<label class="form-check-label:">
+						<input type="checkbox" class="form-check-input" value=""> I agree to the terms and conditions.
+					</label>
+				</div> <br />
+				<input type="button" class="btn btn-outline-secondary" value="Submit Information" />
+			</form>
+			<br />
+		</div>
+		
+		<!--Footer-->
+		<footer class="container py-5">
+		<div class="row">
+			<div class="col-12 col-md">
+				<img style="position:left" height="50px" width="50px" src="assets/Home_Page/imgs/sanitas_logo.png" alt="image not found.">
+			</div>
+			<div class="col-6 col-md">
+				<h5>Features</h5>
+				<ul class="list-unstyled text-small">
+					<li><a class="link-secondary" href="#">Cool stuff</a></li>
+					<li><a class="link-secondary" href="#">Random feature</a></li>
+					<li><a class="link-secondary" href="#">Team feature</a></li>
+					<li><a class="link-secondary" href="#">Stuff for developers</a></li>
+					<li><a class="link-secondary" href="#">Another one</a></li>
+					<li><a class="link-secondary" href="#">Last time</a></li>
+				</ul>
+			</div>
+			<div class="col-6 col-md">
+				<h5>Resources</h5>
+				<ul class="list-unstyled text-small">
+					<li><a class="link-secondary" href="#">Resource name</a></li>
+					<li><a class="link-secondary" href="#">Resource</a></li>
+					<li><a class="link-secondary" href="#">Another resource</a></li>
+					<li><a class="link-secondary" href="#">Final resource</a></li>
+				</ul>
+			</div>
+			<div class="col-6 col-md">
+				<h5>Resources</h5>
+				<ul class="list-unstyled text-small">
+					<li><a class="link-secondary" href="#">Business</a></li>
+					<li><a class="link-secondary" href="#">Education</a></li>
+					<li><a class="link-secondary" href="#">Government</a></li>
+					<li><a class="link-secondary" href="#">Gaming</a></li>
+				</ul>
+			</div>
+			<div class="col-6 col-md">
+				<h5>About</h5>
+				<ul class="list-unstyled text-small">
+					<li><a class="link-secondary" href="#">Team</a></li>
+					<li><a class="link-secondary" href="#">Locations</a></li>
+					<li><a class="link-secondary" href="#">Privacy</a></li>
+					<li><a class="link-secondary" href="#">Terms</a></li>
+				</ul>
+			</div>
+		</div>
+		</footer>
 	</div>
-	
 	<script>
 	$(document).ready(function(){
 	$('[data-toggle="popover"]').popover();   
