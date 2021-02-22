@@ -8,16 +8,16 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+		<script>
+			$(function(){
+				$('#our-header').load('header.html');
+				$('#our-footer').load('footer.html');
+			});
+		</script>
 	</head>
 	<body>
-	<nav class="navbar navbar-expand-sm bg-light navbar-light">
-    	<div class="container col-sm-6">
-		<a class="navbar-brand" href="#">
-			<img src="https://media.discordapp.net/attachments/799284639524454413/807669276948430878/logo.png" alt="logo" width="120px"/>
-		</a>
-        </div>
-	</nav>
-	
+	<div id="our-header"></div>
 	<div class="container col-sm-6">
 	
 	<div class="row">
@@ -55,5 +55,6 @@
 	</form>
 	<br /> <br />
 	</div>
+	<div id="our-footer"></div>
 	</body>
 </html>
