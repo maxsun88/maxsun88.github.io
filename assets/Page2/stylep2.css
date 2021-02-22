@@ -10,42 +10,6 @@ body {
     background-color: #f7f7f7;
 }
 
-.nav {
-    padding-top: 0px;
-    background: #fff;
-    height: auto;
-    width: 100%;
-    z-index: 150;
-    top: 0px;
-    position: sticky;
-    box-shadow: 0 2px 3px rgba(0,0,0,.4);
-    color:rgb(0, 0, 0);
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgba(216, 213, 213, 0.562);
-    position: sticky;
-    top: 0;
-    width: 100%;
-}
-
-li {
-    float: left;
-    border-right: 1px solid #bbb;
-}
-
-li a {
-    display: block;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
 .page-wrapper {
     height: 100%;
     display: table;
@@ -234,41 +198,3 @@ li a {
     }
 }
 
-/* Pagination at the bottom of the page*/
-.pagination {
-    display: inline-block;
-}
-
-.pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-/* CSS for mobile resizing */
-@media (min-width: 480px) and (max-width: 767px) {
-    .pagination {
-        width: 300.5px;
-        padding: 5px 6px;
-        }
-    }
-    
-    /* CSS for tablet resizing */
-    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .pagination {
-        width: 350.5px;
-        padding: 4px 6px;
-        }
-    }
-
-.pagination a.active {
-    background-color: #e2da0f;
-    color: white;
-    border-radius: 5px;
-}
-
-.pagination a:hover:not(.active) {
-    background-color: #ddd;
-    border-radius: 5px;
-}
