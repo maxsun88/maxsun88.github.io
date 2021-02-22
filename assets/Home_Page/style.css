@@ -7,23 +7,26 @@ Ryan's CSS Aisles
   flex-wrap: wrap;
 }
 
-.products th, .products td{
+.products th,
+.products td {
   flex: 25%;
   padding: 20px;
 }
 
-
-.products a
-{
+.products a {
+  text-decoration: none;
+  color: black;
+}
+.products a:hover {
   color: black;
 }
 
-.products table
-{
+.products table {
   margin-left: auto;
   margin-right: auto;
 }
-.products td, th {
+.products td,
+th {
   padding: 20px;
 }
 .products .zoom {
@@ -32,11 +35,11 @@ Ryan's CSS Aisles
   transition: 1.1s ease;
   backface-visibility: hidden;
 }
-.products td:hover .mid{
+.products td:hover .mid {
   transition: 0.5s ease;
-  opacity: 1
+  opacity: 1;
 }
-.products td .mid{
+.products td .mid {
   transition: 0.5s ease;
   opacity: 0.4;
   position: relative;
@@ -47,9 +50,11 @@ Ryan's CSS Aisles
   color: black;
   font-size: 18px;
 }
-.products td, th {
-  transition: transform .4s;
+.products td,
+th {
+  transition: transform 0.4s;
 }
-.products td:hover, .products th:hover {
+.products td:hover,
+.products th:hover {
   transform: scale(1.1);
 }
