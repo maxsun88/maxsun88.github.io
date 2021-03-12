@@ -12,6 +12,25 @@
 				$('#our-footer').load('footer.html');
 			});
 		</script>
+		<script>
+			document.getElementById("quantity").value = getSavedValue("quantity");
+			document.getElementById("sel1").value = getSavedValue("sel1");
+			document.getElementById("sel2").value = getSavedValue("sel2");
+			function saveValue(x)
+			{
+				var id = x.id;
+				var val = x.value;
+				localStorage.setItem(id, value);
+			}
+			function getSavedValue(y)
+			{
+				if (!localStorage.getItem(y))
+				{
+					return "";
+				}
+				return localStorage.getItem(y);
+			}
+		</script>
 	</head>
 	<body>
 	<div id="our-header"></div>
@@ -46,16 +65,16 @@
 		</br>
 			<form class="form-inline" action="">
 				<label for="quantity" class="mr-3 mb-2">Quantity:</label>
-				<input type="number" min="1" class="form-control mr-3 mb-2" id="quantity" value="1" name="quantity">
+				<input type="number" min="1" class="form-control mr-3 mb-2" id="quantity" value="1" name="quantity" onchange="saveValue(this)">
 			</form>
 			
 			<form class="form-inline" action="">
 				<div class="form-group">
 					<label for="size" class="mr-3 mb-2">Size:</label>
-					<select class="form-control" id="sel1">
-					  <option>Small container</option>
-					  <option>Medium container</option>
-					  <option>Large container</option>
+					<select class="form-control" id="sel1" onchange="saveValue(this)">
+					  <option value="small">Small container</option>
+					  <option value="medium">Medium container</option>
+					  <option value="large">Large container</option>
 					</select>
 				  </div>
 			</form>
@@ -63,10 +82,10 @@
 			<form class="form-inline" action="">
 				<div class="form-group">
 					<label for="size" class="mr-3 mb-2">Type:</label>
-					<select class="form-control" id="sel2">
-					  <option>Normal</option>
-					  <option>Chocolate</option>
-					  <option>Strawberry</option>
+					<select class="form-control" id="sel2" onchange="saveValue(this)">
+					  <option value="normal">Normal</option>
+					  <option value="chocolate">Chocolate</option>
+					  <option value="strawberry">Strawberry</option>
 					</select>
 				  </div>
 			</form>
