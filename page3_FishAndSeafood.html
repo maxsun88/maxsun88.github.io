@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title> Sanitas Groceries - Product description </title>
+		<meta charset = "utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		
+		<!-- Custom styles for this template -->
+		<link href="assets/Home_Page/style.css" rel="stylesheet">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$('#our-header').load('header.html');
+				$('#our-footer').load('footer.html');
+			});
+		</script>
+	</head>
+	<body>
+	<div id="our-header"></div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<br />
+				<br /><h2> Frozen Shell </h2>
+				<h4> 250g </h4>
+				<br />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="assets/Page2/imgs/frozen_seafood_shell.jpg" class="img-fluid rounded mb-3" alt="Frozen Shell" width="300px"/>
+			</div>
+			<div class="col-sm-9">
+				<h3> $3.19 ea.</h3>
+				<h5> $1.28 /100g </h5> <br />
+				<h4> Product description </h4>
+				<p> Frozen Shell </p>
+				<hr />
+				<a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+					More description
+				  </a>
+				</p>
+				<div class="collapse" id="collapseExample">
+					Product number: F100000123
+				</div>
+			</br>
+				<form class="form-inline" action="">
+					<label for="quantity" class="mr-3 mb-2">Quantity:</label>
+					<input type="number" min="1" class="form-control mr-3 mb-2" id="quantity" value="1" name="quantity">
+				</form>
+				
+				<form class="form-inline" action="">
+					<div class="form-group">
+						<label for="size" class="mr-3 mb-2">Size:</label>
+						<select class="form-control" id="sel1">
+						  <option>Small package</option>
+						  <option>Medium package</option>
+						  <option>Large package</option>
+						</select>
+					  </div>
+				</form>
+				
+				<form class="form-inline" action="">
+					<div class="form-group">
+						<label for="size" class="mr-3 mb-2">Type:</label>
+						<select class="form-control" id="sel2">
+						  <option>Sea Quest</option>
+						  <option>Natural Wild</option>
+						</select>
+					  </div>
+				</form>
+				<br />
+				<input type="button" class="btn btn-outline-dark mb-2" value="Add to cart" />
+			</div>
+		</div>
+		<br /> <br />
+	</div>
+
+	<div id="our-footer"></div>
+
+	</body>
+</html>

@@ -6,13 +6,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 		<script>
 			$(function(){
 				$('#our-header').load('header.html');
 				$('#our-footer').load('footer.html');
 			});
+		</script>
+		<script>
+			document.getElementById("quantity").value = getSavedValue("quantity");
+			document.getElementById("sel1").value = getSavedValue("sel1");
+			document.getElementById("sel2").value = getSavedValue("sel2");
+			function saveValue(x)
+			{
+				var id = x.id;
+				var val = x.value;
+				localStorage.setItem(id, value);
+			}
+			function getSavedValue(y)
+			{
+				if (!localStorage.getItem(y))
+				{
+					return "";
+				}
+				return localStorage.getItem(y);
+			}
 		</script>
 	</head>
 	<body>
@@ -45,14 +62,37 @@
 							(1L)
 							$0.20 /100ml.
             </div>
+		</br>
+			<form class="form-inline" action="">
+				<label for="quantity" class="mr-3 mb-2">Quantity:</label>
+				<input type="number" min="1" class="form-control mr-3 mb-2" id="quantity" value="1" name="quantity" onchange="saveValue(this)">
+			</form>
+			
+			<form class="form-inline" action="">
+				<div class="form-group">
+					<label for="size" class="mr-3 mb-2">Size:</label>
+					<select class="form-control" id="sel1" onchange="saveValue(this)">
+					  <option value="small">Small container</option>
+					  <option value="medium">Medium container</option>
+					  <option value="large">Large container</option>
+					</select>
+				  </div>
+			</form>
+			
+			<form class="form-inline" action="">
+				<div class="form-group">
+					<label for="size" class="mr-3 mb-2">Type:</label>
+					<select class="form-control" id="sel2" onchange="saveValue(this)">
+					  <option value="normal">Normal</option>
+					  <option value="chocolate">Chocolate</option>
+					  <option value="strawberry">Strawberry</option>
+					</select>
+				  </div>
+			</form>
+			<br />
+			<input type="button" class="btn btn-outline-dark mb-2" value="Add to cart" />
 		</div>
 	</div>
-	<br>
-	<form class="form-inline" action="">
-		<label for="quantity" class="mr-3 mb-2">Quantity:</label>
-		<input type="number" min="1"class="form-control mr-3 mb-2" id="quantity" value="1" name="quantity">
-		<input type="button" class="btn btn-outline-dark mb-2" value="Add to cart" />
-	</form>
 	<br/> <br/>
 	</div>
 	</body>

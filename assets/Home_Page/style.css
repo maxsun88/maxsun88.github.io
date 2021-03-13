@@ -30,6 +30,13 @@ Ryan's CSS Aisles
 th {
   padding: 20px;
 }
+
+@media (max-width: 1000px) {
+  .products table {
+    width: 172.5px;
+  }
+}
+
 .products .zoom {
   opacity: 1;
   display: block;
