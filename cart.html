@@ -16,6 +16,24 @@
             $('#our-footer').load('footer.html');
         });
     </script>
+    <script>
+        window.onbeforeunload = function() {
+            localStorage.setItem("quantity1", $('#quantity1').val());
+            localStorage.setItem("quantity2", $('#quantity2').val());
+
+            console.log("onbeforeunload " +localStorage);
+        }
+
+        window.onload = function() {
+            var quantity1 = localStorage.getItem("quantity1");
+            console.log("onload " + quantity1);
+
+            var quantity2 = localStorage.getItem("quantity2");
+            console.log("onload " + quantity2);
+            if (quantity1 !== null) $('#quantity1').val(quantity1);
+            if (quantity2 !== null) $('#quantity2').val(quantity2);
+        }
+    </script>
     <title>Sanitas Shopping Cart</title>
 </head>
 <body>
@@ -49,7 +67,7 @@
                                 </div>
                                 <div>
                                     <div class="def-number-input number-input safari_only mb-0 w-100">
-                                        <input id="quantity1" min="1" name="quantity" value="7" type="number">
+                                        <input class="form-control" class="quantity" min="1" id="quantity1" name="quantity" value="7" type="number">
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +99,7 @@
                                 </div>
                                 <div>
                                     <div class="def-number-input number-input safari_only mb-0 w-100">
-                                        <input id="quantity2" min="1" name="quantity" value="2" type="number">
+                                        <input class="form-control" class="quantity" min="1" id="quantity2" name="quantity" value="2" type="number">
                                     </div>
                                 </div>
                             </div>
@@ -147,11 +165,11 @@
                     </li>
                 </ul>
                 <button type="button" class="btn btn-primary btn-block">Checkout</button>
+                <button type="button" class="btn btn-dark btn-block" onclick="history.back()">Continue Shopping</button>
             </div>
         </div>
     </div>
 </div>
 <div id="our-footer"></div>
-<script src="assets/cart/cart.js" charset="utf-8"></script>
 </body>
 </html>
