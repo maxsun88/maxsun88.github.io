@@ -42,14 +42,36 @@
 			<div class="collapse" id="collapseExample">
 				Product Number: 201020
 			</div>
+		</br>
+			<form class="form-inline" action="">
+				<label for="quantity" class="mr-3 mb-2">Quantity:</label>
+				<input type="number" min="1" class="form-control mr-3 mb-2" id="quantity" value="1" name="quantity">
+			</form>
+			
+			<form class="form-inline" action="">
+				<div class="form-group">
+					<label for="size" class="mr-3 mb-2">Size:</label>
+					<select class="form-control" id="sel1">
+					  <option>Small</option>
+					  <option>Medium</option>
+					  <option>Large</option>
+					</select>
+				  </div>
+			</form>
+			
+			<form class="form-inline" action="">
+				<div class="form-group">
+					<label for="size" class="mr-3 mb-2">Type:</label>
+					<select class="form-control" id="sel2">
+					  <option>Lean</option>
+					  <option>Extra Lean</option>
+					</select>
+				  </div>
+			</form>
+			<br />
+			<input type="button" class="btn btn-outline-dark mb-2" value="Add to cart" />
 		</div>
 	</div>
-	</br>
-	<form class="form-inline" action="">
-		<label for="quantity" class="mr-3 mb-2">Quantity:</label>
-		<input type="number" min="1" class="form-control mr-3 mb-2" id="quantity" value="1" name="quantity">
-		<input type="button" class="btn btn-outline-dark mb-2" value="Add to cart" />
-	</form>
 	<br /> <br />
 	</div>
 	<div id="our-footer"></div>

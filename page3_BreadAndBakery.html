@@ -16,6 +16,17 @@
 				$('#our-footer').load('footer.html');
 			});
 		</script>
+		<script>
+			$(function() {
+			if (localStorage.getItem('form_frame')) {
+			$("#form_frame option").eq(localStorage.getItem('form_frame')).prop('selected', true);
+			}
+
+			$("#form_frame").on('change', function() {
+			localStorage.setItem('form_frame', $('option:selected', this).index());
+			});
+			});
+		</script>
 	</head>
 	<body>
 	<div id="our-header"></div>
@@ -46,14 +57,37 @@
 				<div class="collapse" id="collapseExample">
 					Product number: F10000010
 				</div>
+			</br>
+				<form class="form-inline" action="">
+					<label for="quantity" class="mr-3 mb-2">Quantity:</label>
+					<input type="number" min="1" class="form-control mr-3 mb-2" id="quantity" value="1" name="quantity">
+				</form>
+				
+				<form class="form-inline" action="">
+					<div class="form-group">
+						<label for="size" class="mr-3 mb-2">Size:</label>
+						<select class="form-control" id="form_frame sel1">
+						  <option>Short</option>
+						  <option>Medium</option>
+						  <option>Long</option>
+						</select>
+					  </div>
+				</form>
+				
+				<form class="form-inline" action="">
+					<div class="form-group">
+						<label for="size" class="mr-3 mb-2">Type:</label>
+						<select class="form-control mt-2 mb-2" id="form_frame" onchange="getData(this);">
+						  <option value="data1" selected="selected">Classic</option>
+						  <option value="data2">Sprinkled sesame seeds</option>
+						  <option value="data3">Sprinkled cheese</option>
+						</select>
+					  </div>
+				</form>
+				<br />
+				<input type="button" class="btn btn-outline-dark mb-2" value="Add to cart" />
 			</div>
 		</div>
-		</br>
-		<form class="form-inline" action="">
-			<label for="quantity" class="mr-3 mb-2">Quantity:</label>
-			<input type="number" class="form-control mr-3 mb-2" id="quantity" value="0" name="quantity">
-			<input type="button" class="btn btn-outline-secondary mb-2" value="Add to cart" />
-		</form>
 		<br /> <br />
 	</div>
 
