@@ -16,6 +16,46 @@
 				$('#our-footer').load('footer.html');
 			});
 		</script>
+		<!-- Save values on refresh -->
+		<script> 
+			$(function() {
+				// For two buttons
+			myStorage = window.sessionStorage;
+			$("#sel1").on('change', function() {
+        	myStorage.setItem('sel1', $('option:selected', this).index());
+    		});
+			$("#sel2").on('change', function() {
+        	myStorage.setItem('sel2', $('option:selected', this).index());
+    		});
+    		
+				// For quantity button
+			window.onbeforeunload = function() {
+			
+			myStorage.setItem("origin", window.location.href);
+   			myStorage.setItem("qty", $('#qty').val());
+    
+
+   			console.log("onbeforeunload " + myStorage);
+			}
+
+			window.onload = function() {
+				if(myStorage.getItem("origin") !== window.location.href){
+       			myStorage.clear();
+    			}
+   			var quantity1 = myStorage.getItem("qty");
+   			console.log("onload " + quantity1);
+   			if (quantity1 !== null || quantity === 1) $('#qty').val(quantity1);
+
+			   //This is good.
+
+			if (myStorage.getItem('sel1')) $("#sel1 option").eq(myStorage.getItem('sel1')).prop('selected',true); 
+			if (myStorage.getItem('sel2')) $("#sel2 option").eq(myStorage.getItem('sel2')).prop('selected',true);
+			
+			}
+			
+
+			});
+		</script>
 	</head>
 	<body>
 	<div id="our-header"></div>
@@ -49,7 +89,7 @@
 			</br>
 				<form class="form-inline" action="">
 					<label for="quantity" class="mr-3 mb-2">Quantity:</label>
-					<input type="number" min="1" class="form-control mr-3 mb-2" id="quantity" value="1" name="quantity">
+					<input type="number" min="1" class="form-control mr-3 mb-2" id="qty" value="1" name="quantity">
 				</form>
 				
 				<form class="form-inline" action="">
