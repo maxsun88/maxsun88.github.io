@@ -9,7 +9,6 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Homepage styling for nav bar and footer -->
     <link rel="stylesheet" href="assets/Home_Page/style.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(function(){
@@ -17,7 +16,6 @@
             $('#our-footer').load('footer.html');
         });
     </script>
-
     <script>
         window.onbeforeunload = function() {
             localStorage.setItem("quantity1", $('#quantity1').val());
@@ -36,27 +34,23 @@
             if (quantity2 !== null) $('#quantity2').val(quantity2);
         }
     </script>
-
     <title>Sanitas Shopping Cart</title>
 </head>
 <body>
-	<div id="our-header"></div>
-    <!--Grid row-->
-    <div class="row">
-
-      <!--Grid column-->
-      <div class="col-lg-6 ml-5">
-
+<div id="our-header"></div>
+<!--Grid row-->
+<div class="row">
+    <!--Grid column-->
+    <div class="col-lg-6 ml-5">
         <!-- Card -->
         <div class="mb-3">
             <div class="pt-4 wish-list">
+                <h5 class="mb-4">Cart (<span>2</span> items)</h5>
 
-            <h5 class="mb-4">Cart (<span>2</span> items)</h5>
-
-            <div class="row mb-4">
-                <div class="col-md-5 col-lg-3 col-xl-3">
-                    <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
-                        <img class="img-fluid w-100" src="assets/Page2/imgs/bananapage2.jpg">
+                <div class="row mb-4">
+                    <div class="col-md-5 col-lg-3 col-xl-3">
+                        <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+                            <img class="img-fluid w-100" src="assets/Page2/imgs/bananapage2.jpg">
                   <a href="#!">
                     <div class="mask">
 
@@ -66,130 +60,118 @@
         </div>
         <div class="col-md-7 col-lg-9 col-xl-9">
             <div>
-                <div class="d-flex justify-content-between">
-                    <div>
-                      <h5>Banana</h5>
-                      <p class="mb-2 text-muted text-uppercase small">190g avg.</p>
-                      <p class="mb-2 text-muted text-uppercase small">$1.74 /kg</p>
-                      <p class="mb-2 text-muted text-uppercase small">$0.79 /lb</p>
-                    </div>
-                    <div>
-                        <div class="def-number-input number-input safari_only mb-0 w-100">
-                        <input class="form-control" class="quantity" min="1" id="quantity1" name="quantity" value="7" type="number">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5>Banana</h5>
+                                    <p class="mb-2 text-muted text-uppercase small">190g avg.</p>
+                                    <p class="mb-2 text-muted text-uppercase small">$1.74 /kg</p>
+                                    <p class="mb-2 text-muted text-uppercase small">$0.79 /lb</p>
+                                </div>
+                                <div>
+                                    <div class="def-number-input number-input safari_only mb-0 w-100">
+                                        <input class="form-control" class="quantity" min="1" id="quantity1" name="quantity" value="7" type="number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center"></div>
+                            <div>
+                                <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3 mb-4"> Remove item </a>
+                                <p class="mb-0"><span><strong id="summary">$2.31</strong></span></p class="mb-0">
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <div class="row mb-4">
+                    <div class="col-md-5 col-lg-3 col-xl-3">
+                        <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+                            <img class="img-fluid w-100" src="assets/Page2/imgs/grapes.jpg">
+                            <div class="mask">
+                            </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-between align-items-center"></div>
-                    <div>
-                        <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3 mb-4"> Remove item </a>
-                    <p class="mb-0"><span><strong id="summary">$2.31</strong></span></p class="mb-0">
+                    <div class="col-md-7 col-lg-9 col-xl-9">
+                        <div>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5>Grapes</h5>
+                                    <p class="mb-2 text-muted text-uppercase small">A bag is 1000G</p>
+                                    <p class="mb-2 text-muted text-uppercase small">$6.59 /kg</p>
+                                    <p class="mb-2 text-muted text-uppercase small">$22.99 /lb</p>
+                                </div>
+                                <div>
+                                    <div class="def-number-input number-input safari_only mb-0 w-100">
+                                        <input class="form-control" class="quantity" min="1" id="quantity2" name="quantity" value="2" type="number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3 mb-4">
+                                        Remove item
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="mb-0"><span><strong id="summary">$6.60</strong></span></p class="mb-0">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <hr class="mb-4">
-        <div class="row mb-4">
-            <div class="col-md-5 col-lg-3 col-xl-3">
-                <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
-                    <img class="img-fluid w-100" src="assets/Page2/imgs/grapes.jpg">
-                    <div class="mask">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-7 col-lg-9 col-xl-9">
-                <div>
-                    <div class="d-flex justify-content-between">
-                        <div>
-                      <h5>Grapes</h5>
-                      <p class="mb-2 text-muted text-uppercase small">A bag is 1000G</p>
-                      <p class="mb-2 text-muted text-uppercase small">$6.59 /kg</p>
-                      <p class="mb-2 text-muted text-uppercase small">$22.99 /lb</p>
-                        </div>
-                        <div>
-                            <div class="def-number-input number-input safari_only mb-0 w-100">
-                            <input class="form-control" class="quantity" min="1" id="quantity2" name="quantity" value="2" type="number">
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3 mb-4">
-                        Remove item
-                        </a>
-                    </div>
-                    </div>
-                    <p class="mb-0"><span><strong id="summary">$6.60</strong></span></p class="mb-0">
-                    </div>
-                </div>
-            </div>
-        </div>
-  </div>
-
-
         <!-- Card -->
         <div class="mb-3">
-          <div class="pt-4">
-
-            <h5 class="mb-4">We accept</h5>
-
-            <img class="mr-2" width="45px"
-              src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
-              alt="Visa">
-            <img class="mr-2" width="45px"
-              src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-              alt="American Express">
-            <img class="mr-2" width="45px"
-              src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
-              alt="Mastercard">
-            <img class="mr-2" width="45px"
-              src="https://mdbootstrap.com/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
-              alt="PayPal acceptance mark">
-          </div>
+            <div class="pt-4">
+                <h5 class="mb-4">We accept</h5>
+                <img class="mr-2" width="45px"
+                     src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+                     alt="Visa">
+                <img class="mr-2" width="45px"
+                     src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+                     alt="American Express">
+                <img class="mr-2" width="45px"
+                     src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+                     alt="Mastercard">
+                <img class="mr-2" width="45px"
+                     src="https://mdbootstrap.com/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
+                     alt="PayPal acceptance mark">
+            </div>
         </div>
-
     </div>
-
-      <!--Grid column-->
-      <div class="col-lg-4">
-
+    <!--Grid column-->
+    <div class="col-lg-4">
         <!-- Card -->
         <div class="mb-3">
-          <div class="pt-4">
-
-            <h5 class="mb-3">The total amount of</h5>
-
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                Amount before taxes
-                <span>$8.91</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                GST (5%)
-                <span>$0.45</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                QST (10%)
-                <span>$0.89</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                <div>
-                  <strong>The total amount of</strong>
-                  <strong>
-                    <p class="mb-0">(including GST & QST)</p>
-                  </strong>
-                </div>
-                <span><strong>$10.25</strong></span>
-              </li>
-            </ul>
-
-            <button type="button" class="btn btn-primary btn-block">Checkout</button>
-            <button type="button" class="btn btn-dark btn-block" onclick="history.back()">Continue Shopping</button>
-            
-          </div>
+            <div class="pt-4">
+                <h5 class="mb-3">The total amount of</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                        Amount before taxes
+                        <span>$8.91</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                        GST (5%)
+                        <span>$0.45</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                        QST (10%)
+                        <span>$0.89</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                        <div>
+                            <strong>The total amount of</strong>
+                            <strong>
+                                <p class="mb-0">(including GST & QST)</p>
+                            </strong>
+                        </div>
+                        <span><strong>$10.25</strong></span>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-primary btn-block">Checkout</button>
+                <button type="button" class="btn btn-dark btn-block" onclick="history.back()">Continue Shopping</button>
+            </div>
         </div>
     </div>
 </div>
-
 <div id="our-footer"></div>
 </body>
 </html>

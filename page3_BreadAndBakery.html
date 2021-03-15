@@ -5,26 +5,52 @@
 		<meta charset = "utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-		
+
 		<!-- Custom styles for this template -->
 		<link href="assets/Home_Page/style.css" rel="stylesheet">
-		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
 		<script>
 			$(function(){
 				$('#our-header').load('header.html');
 				$('#our-footer').load('footer.html');
 			});
 		</script>
+		<!-- Save values on refresh -->
 		<script>
 			$(function() {
-			if (localStorage.getItem('form_frame')) {
-			$("#form_frame option").eq(localStorage.getItem('form_frame')).prop('selected', true);
-			}
+				// For two buttons
+			myStorage = window.sessionStorage;
+			$("#sel1").on('change', function() {
+        	myStorage.setItem('sel1', $('option:selected', this).index());
+    		});
+			$("#sel2").on('change', function() {
+        	myStorage.setItem('sel2', $('option:selected', this).index());
+    		});
 
-			$("#form_frame").on('change', function() {
-			localStorage.setItem('form_frame', $('option:selected', this).index());
-			});
+				// For quantity button
+			window.onbeforeunload = function() {
+
+			myStorage.setItem("origin", window.location.href);
+   			myStorage.setItem("qty", $('#qty').val());
+
+   			console.log("onbeforeunload " + myStorage);
+			}
+			window.onload = function() {
+				if(myStorage.getItem("origin") !== window.location.href){
+       			myStorage.clear();
+    			}
+   			var quantity1 = myStorage.getItem("qty");
+   			console.log("onload " + quantity1);
+   			if (quantity1 !== null || quantity === 1) $('#qty').val(quantity1);
+			if (myStorage.getItem('sel1')) $("#sel1 option").eq(myStorage.getItem('sel1')).prop('selected',true);
+			if (myStorage.getItem('sel2')) $("#sel2 option").eq(myStorage.getItem('sel2')).prop('selected',true);
+
+			}
+			
+
 			});
 		</script>
 	</head>
@@ -50,37 +76,36 @@
 				<h4> Product description </h4>
 				<p> Freshly cooked french baguette. </p>
 				<hr />
-				<a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+				<a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 					More description
-				  </a>
-				</p>
+				</a>
 				<div class="collapse" id="collapseExample">
-					Product number: F10000010
+					<br/>Product number: F10000010
 				</div>
 			</br>
 				<form class="form-inline" action="">
 					<label for="quantity" class="mr-3 mb-2">Quantity:</label>
-					<input type="number" min="1" class="form-control mr-3 mb-2" id="quantity" value="1" name="quantity">
+					<input type="number" min="1" class="form-control mr-3 mb-2" id="qty" value="1" name="quantity">
 				</form>
-				
+
 				<form class="form-inline" action="">
 					<div class="form-group">
 						<label for="size" class="mr-3 mb-2">Size:</label>
-						<select class="form-control" id="form_frame sel1">
+						<select class="form-control" id="sel1">
 						  <option>Short</option>
 						  <option>Medium</option>
 						  <option>Long</option>
 						</select>
 					  </div>
 				</form>
-				
+
 				<form class="form-inline" action="">
 					<div class="form-group">
 						<label for="size" class="mr-3 mb-2">Type:</label>
-						<select class="form-control mt-2 mb-2" id="form_frame" onchange="getData(this);">
-						  <option value="data1" selected="selected">Classic</option>
-						  <option value="data2">Sprinkled sesame seeds</option>
-						  <option value="data3">Sprinkled cheese</option>
+						<select class="form-control" id="sel2">
+						  <option>Classic</option>
+						  <option>Sprinkled sesame seeds</option>
+						  <option>Sprinkled cheese</option>
 						</select>
 					  </div>
 				</form>
@@ -88,8 +113,8 @@
 				<input type="button" class="btn btn-outline-dark mb-2" value="Add to cart" />
 			</div>
 		</div>
-		<br /> <br />
 	</div>
+	<br /> <br />
 
 	<div id="our-footer"></div>
 
