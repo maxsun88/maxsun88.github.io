@@ -5,10 +5,10 @@
 		<meta charset = "utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+		
 		<!-- Custom styles for this template -->
 		<link href="assets/Home_Page/style.css" rel="stylesheet">
-
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<!-- Import header and footer -->
 		<script>
@@ -24,6 +24,9 @@
 			myStorage = window.sessionStorage;
 			$("#sel1").on('change', function() {
         	myStorage.setItem('sel1', $('option:selected', this).index());
+    		});
+			$("#sel2").on('change', function() {
+        	myStorage.setItem('sel2', $('option:selected', this).index());
     		});
     		
 				// For quantity button
@@ -47,13 +50,13 @@
 			   //This is good.
 
 			if (myStorage.getItem('sel1')) $("#sel1 option").eq(myStorage.getItem('sel1')).prop('selected',true); 
+			if (myStorage.getItem('sel2')) $("#sel2 option").eq(myStorage.getItem('sel2')).prop('selected',true);
 			
 			}
 			
 
 			});
 		</script>
-
 	</head>
 	<body>
 	<div id="our-header"></div>
