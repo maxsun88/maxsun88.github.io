@@ -83,19 +83,27 @@
 			
 			<form action="">
 				<div class="form-group row">
-					<label for="quantity" class="col-sm-2">Quantity:</label>
-					<input type="number" min="1" class="col-sm-3 form-control" id="qty" value="1" name="quantity">
+					<div class="col-sm-2">
+						<label for="quantity">Quantity:</label>
+					</div>
+					<div class="col-sm-3">
+						<input type="number" min="1" class="form-control" id="qty" value="1" name="quantity">
+					</div>
 				</div>
 				<div class="form-group row">
-					<label for="type" class="col-sm-2">Type:</label>
-					<select class="form-control col-sm-3" id="sel1">
-						<option value="data4">Lean</option>
-						<option value="data5">Extra Lean</option>
-					</select>
+					<div class="col-sm-2">
+						<label for="type">Type:</label>
+					</div>
+					<div class="col-sm-3">
+						<select class="form-control" id="sel1">
+							<option value="data4">Lean</option>
+							<option value="data5">Extra Lean</option>
+						</select>
+					</div>
 				</div>
 				<div class="form-group row">
 					<div class="col-sm-3">
-						<a class="btn btn-primary form-control" href="#" role="button">Add to cart</a>
+						<a class="btn btn-primary form-control mt-3" href="#" role="button">Add to cart</a>
 					</div>
 				</div>
 			</form>
