@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 		<script>
 			$(function(){
 				$('#our-header').load('header.html');
@@ -19,9 +21,6 @@
 			myStorage = window.sessionStorage;
 			$("#sel1").on('change', function() {
         	myStorage.setItem('sel1', $('option:selected', this).index());
-    		});
-			$("#sel2").on('change', function() {
-        	myStorage.setItem('sel2', $('option:selected', this).index());
     		});
     		
 				// For quantity button
@@ -45,7 +44,6 @@
 			   //This is good.
 
 			if (myStorage.getItem('sel1')) $("#sel1 option").eq(myStorage.getItem('sel1')).prop('selected',true); 
-			if (myStorage.getItem('sel2')) $("#sel2 option").eq(myStorage.getItem('sel2')).prop('selected',true);
 			
 			}
 			
@@ -55,67 +53,58 @@
 	</head>
 	<body>
 	<div id="our-header"></div>
-	<div class="container col-sm-6">
-	
-	<div class="row">
-		<div class="col">
-			<br />
-			<h1>Frozen Pizza</h1>
-			<br />
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-3">
-			<img src="assets/Page2/imgs/frozen_pizza.jpg" class="img-fluid rounded mb-3" alt="bananas" width="100%"/> 
-		</div>
-		<div class="col-sm-9">
-			<h4> $13.21 </h4> <br />
-			<p><strong>Product description</strong></p>
-			One person serving
-			<br />
-			$13.21 / box
-			<hr />
-			<a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-				More description
-			  </a>
-			</p>
-			<div class="collapse" id="collapseExample">
-				Product Number: 201020
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<br />
+				<br /><h2> Frozen Pizza </h2>
+				<h4> 454g </h4>
+				<br />
 			</div>
-		</br>
-			<form class="form-inline" action="">
-				<label for="quantity" class="mr-3 mb-2">Quantity:</label>
-				<input type="number" min="1" class="form-control mr-3 mb-2" id="qty" value="1" name="quantity">
-			</form>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="assets/Page2/imgs/frozen_pizza.jpg" class="img-fluid rounded mb-3" alt="Frozen pizza" width="300px"/>
+			</div>
+			<div class="col-sm-9">
+				<h3> 13.21 ea.</h3> <br />
+				<h4> Product description </h4> <br />
+				<p> One person serving. </p>
+				<hr />
+				<a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					More description
+				</a>
+				<div class="collapse" id="collapseExample">
+					<br/>Product number: F10000013
+				</div>
+			</br> </br>
 			
-			<form class="form-inline" action="">
-				<div class="form-group">
-					<label for="size" class="mr-3 mb-2">Size:</label>
-					<select class="form-control" id="sel1">
-					  <option>Small</option>
-					  <option>Medium</option>
-					  <option>Large</option>
+			<form action="">
+				<div class="form-group row">
+					<label for="quantity" class="col-sm-2">Quantity:</label>
+					<input type="number" min="1" class="col-sm-3 form-control" id="qty" value="1" name="quantity">
+				</div>
+				<div class="form-group row">
+					<label for="type" class="col-sm-2">Type:</label>
+					<select class="form-control col-sm-3" id="sel1">
+						<option value="data4">Neopolitan</option>
+						<option value="data5">New York Style</option>
+						<option value="data6">Chicago Style</option>
+						<option value="data7">Quatro Fromaggi</option>
 					</select>
-				  </div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-3">
+						<a class="btn btn-primary form-control" href="#" role="button">Add to cart</a>
+					</div>
+				</div>
 			</form>
-			
-			<form class="form-inline" action="">
-				<div class="form-group">
-					<label for="size" class="mr-3 mb-2">Type:</label>
-					<select class="form-control" id="sel2">
-					  <option>Neopolitan Pizza</option>
-					  <option>New York Pizza</option>
-					  <option>Chicago Style</option>
-					  <option>Quatro formaggi</option>
-					</select>
-				  </div>
-			</form>
-			<br />
-			<input type="button" class="btn btn-outline-dark mb-2" value="Add to cart" />
+			</div>
 		</div>
 	</div>
 	<br /> <br />
-	</div>
+
 	<div id="our-footer"></div>
 	</body>
 </html>
