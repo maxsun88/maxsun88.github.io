@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang = "en">
-	<head>
-		<title> Sanitas Groceries - Product description </title>
+	<title> Sanitas Groceries - Product description </title>
 		<meta charset = "utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+		
 		<!-- Custom styles for this template -->
 		<link href="assets/Home_Page/style.css" rel="stylesheet">
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- Import header and footer -->
 		<script>
 			$(function(){
 				$('#our-header').load('header.html');
@@ -17,7 +17,7 @@
 			});
 		</script>
 		<!-- Save values on refresh -->
-		<script>
+		<script> 
 			$(function() {
 				// For two buttons
 			myStorage = window.sessionStorage;
@@ -27,15 +27,17 @@
 			$("#sel2").on('change', function() {
         	myStorage.setItem('sel2', $('option:selected', this).index());
     		});
-
+    		
 				// For quantity button
 			window.onbeforeunload = function() {
-
+			
 			myStorage.setItem("origin", window.location.href);
    			myStorage.setItem("qty", $('#qty').val());
+    
 
    			console.log("onbeforeunload " + myStorage);
 			}
+
 			window.onload = function() {
 				if(myStorage.getItem("origin") !== window.location.href){
        			myStorage.clear();
@@ -43,9 +45,12 @@
    			var quantity1 = myStorage.getItem("qty");
    			console.log("onload " + quantity1);
    			if (quantity1 !== null || quantity === 1) $('#qty').val(quantity1);
-			if (myStorage.getItem('sel1')) $("#sel1 option").eq(myStorage.getItem('sel1')).prop('selected',true);
-			if (myStorage.getItem('sel2')) $("#sel2 option").eq(myStorage.getItem('sel2')).prop('selected',true);
 
+			   //This is good.
+
+			if (myStorage.getItem('sel1')) $("#sel1 option").eq(myStorage.getItem('sel1')).prop('selected',true); 
+			if (myStorage.getItem('sel2')) $("#sel2 option").eq(myStorage.getItem('sel2')).prop('selected',true);
+			
 			}
 			
 
