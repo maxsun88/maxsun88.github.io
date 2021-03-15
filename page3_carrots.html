@@ -20,9 +20,6 @@
 			$("#sel1").on('change', function() {
         	myStorage.setItem('sel1', $('option:selected', this).index());
     		});
-			$("#sel2").on('change', function() {
-        	myStorage.setItem('sel2', $('option:selected', this).index());
-    		});
     		
 				// For quantity button
 			window.onbeforeunload = function() {
@@ -45,7 +42,6 @@
 			   //This is good.
 
 			if (myStorage.getItem('sel1')) $("#sel1 option").eq(myStorage.getItem('sel1')).prop('selected',true); 
-			if (myStorage.getItem('sel2')) $("#sel2 option").eq(myStorage.getItem('sel2')).prop('selected',true);
 			
 			}
 			
@@ -54,67 +50,58 @@
 		</script>
 	</head>
 	<body>
-	<div id="our-header"></div>
+<div id="our-header"></div>
 	
-	<div class="container col-sm-6">
-	
-	<div class="row">
-		<div class="col">
-			<br />
-			<h1>Carrots</h1>
-			<br />
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<br />
+				<br /><h2> Carrots </h2>
+				<h4> 420g </h4>
+				<br />
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-3">
-			<img src="assets/Page2/imgs/carrots.jpg" class="img-fluid rounded mb-3" alt="carrots" width="90%"/> 
-		</div>
-		<div class="col-sm-9">
-			<h4> $6.69 </h4> <br />
-			<p><strong>Product description</strong></p>
-			A pack is 420g
-			<br />
-			$15.92 /kg $7.22 /lb.
-			<hr />
-			<a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-				More description
-			  </a>
-			</p>
-			<div class="collapse" id="collapseExample">
-				Product Number: 01100011 01100001 01110010 01110010 01101111 01110100
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="assets/Page2/imgs/carrots.jpg" class="img-fluid rounded mb-3" alt="Carrots" width="300px"/>
+			</div>
+			<div class="col-sm-9">
+				<h3> $6.69 ea. </h3>
+				<h5> $1.59 /100g </h5> <br />
+				<h4> Product description </h4>
+				<p> Local organic carrots. </p>
+				<hr />
+				<a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					More description
+				</a>
+				<div class="collapse" id="collapseExample">
+					<br/>Product number: F10000011
+				</div>
+			</br> </br>
+			
+			<form action="">
+				<div class="form-group row">
+					<label for="quantity" class="col-sm-2">Quantity:</label>
+					<input type="number" min="1" class="col-sm-3 form-control" id="qty" value="1" name="quantity">
+				</div>
+				<div class="form-group row">
+					<label for="type" class="col-sm-2">Type:</label>
+					<select class="form-control col-sm-3" id="sel1">
+						<option value="data4">Orange carrots</option>
+						<option value="data5">Deep purple carrots</option>
+						<option value="data6">White carrots</option>
+					</select>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-3">
+						<a class="btn btn-primary form-control" href="#" role="button">Add to cart</a>
+					</div>
+				</div>
+			</form>
 			</div>
 		</div>
 	</div>
-	</br>
-	<form class="form-inline" action="">
-		<label for="quantity" class="mr-3 mb-2">Quantity:</label>
-		<input type="number" min="1" class="form-control mr-3 mb-2" id="qty" value="1" name="quantity">
-	</form>
-	
-	<form class="form-inline" action="">
-		<div class="form-group">
-			<label for="size" class="mr-3 mb-2">Size:</label>
-			<select class="form-control" id="sel1">
-			  <option>Normal bag</option>
-			  <option>Small bag</option>
-			</select>
-		  </div>
-	</form>
-	
-	<form class="form-inline" action="">
-		<div class="form-group">
-			<label for="size" class="mr-3 mb-2">Type:</label>
-			<select class="form-control" id="sel2">
-			  <option>Orange carrots</option>
-			  <option>Deep purple carrots</option>
-			  <option>White carrots</option>
-			</select>
-		  </div>
-	</form>
-	<br />
-	<input type="button" class="btn btn-outline-dark mb-2" value="Add to cart" />
 	<br /> <br />
-	</div>
 	</body>
 	<div id="our-footer"></div>
 </html>

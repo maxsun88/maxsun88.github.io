@@ -73,7 +73,7 @@
 			<div class="col-sm-9">
 				<h3> $3.19 ea.</h3>
 				<h5> $1.28 /100g </h5> <br />
-				<h4> Product description </h4>
+				<h4> Product description </h4> <br />
 				<p> Freshly cooked french baguette. </p>
 				<hr />
 				<a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -82,35 +82,27 @@
 				<div class="collapse" id="collapseExample">
 					<br/>Product number: F10000010
 				</div>
-			</br>
-				<form class="form-inline" action="">
-					<label for="quantity" class="mr-3 mb-2">Quantity:</label>
-					<input type="number" min="1" class="form-control mr-3 mb-2" id="qty" value="1" name="quantity">
-				</form>
-
-				<form class="form-inline" action="">
-					<div class="form-group">
-						<label for="size" class="mr-3 mb-2">Size:</label>
-						<select class="form-control" id="sel1">
-						  <option>Short</option>
-						  <option>Medium</option>
-						  <option>Long</option>
-						</select>
-					  </div>
-				</form>
-
-				<form class="form-inline" action="">
-					<div class="form-group">
-						<label for="size" class="mr-3 mb-2">Type:</label>
-						<select class="form-control" id="sel2">
-						  <option>Classic</option>
-						  <option>Sprinkled sesame seeds</option>
-						  <option>Sprinkled cheese</option>
-						</select>
-					  </div>
-				</form>
-				<br />
-				<input type="button" class="btn btn-outline-dark mb-2" value="Add to cart" />
+			</br> </br>
+			
+			<form action="">
+				<div class="form-group row">
+					<label for="quantity" class="col-sm-2">Quantity:</label>
+					<input type="number" min="1" class="col-sm-3 form-control" id="qty" value="1" name="quantity">
+				</div>
+				<div class="form-group row">
+					<label for="type" class="col-sm-2">Type:</label>
+					<select class="form-control col-sm-3" id="sel2">
+						<option value="data4">Classic</option>
+						<option value="data5">Sprinkled sesame seeds</option>
+						<option value="data6">Sprinkled cheese</option>
+					</select>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-3">
+						<a class="btn btn-primary form-control" href="#" role="button">Add to cart</a>
+					</div>
+				</div>
+			</form>
 			</div>
 		</div>
 	</div>
