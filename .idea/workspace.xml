@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="66" column="16" lean-forward="true" selection-start-line="66" selection-end-line="67" />
+            <state relative-caret-position="686">
+              <caret line="66" column="16" selection-start-line="66" selection-end-line="67" />
             </state>
           </provider>
         </entry>
@@ -29,17 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="43" column="11" lean-forward="true" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page3_carrots.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="15" />
+            <state relative-caret-position="334">
+              <caret line="198" column="47" lean-forward="true" selection-start-line="198" selection-start-column="47" selection-end-line="198" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -124,8 +115,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="25" />
-    <option name="width" value="1920" />
+    <option name="y" value="205" />
+    <option name="width" value="1440" />
     <option name="height" value="875" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -136,7 +127,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -148,6 +138,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -229,12 +220,13 @@
       <workItem from="1613937351380" duration="12094000" />
       <workItem from="1614024150002" duration="6242000" />
       <workItem from="1615751538622" duration="1471000" />
-      <workItem from="1615836994753" duration="3165000" />
+      <workItem from="1615836994753" duration="3825000" />
+      <workItem from="1615856963986" duration="735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88707000" />
+    <option name="totallyTimeSpent" value="90102000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -246,10 +238,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1440" height="875" extended-state="6" />
+    <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22389127" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1687966" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -264,9 +256,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291536" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.39184952" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3912484" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.27155727" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.20271683" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -547,22 +539,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="16" lean-forward="true" selection-start-line="66" selection-end-line="67" />
+        <state relative-caret-position="686">
+          <caret line="66" column="16" selection-start-line="66" selection-end-line="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page3_carrots.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="15" />
+        <state relative-caret-position="141">
+          <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="43" column="11" lean-forward="true" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+        <state relative-caret-position="334">
+          <caret line="198" column="47" lean-forward="true" selection-start-line="198" selection-start-column="47" selection-end-line="198" selection-end-column="47" />
         </state>
       </provider>
     </entry>
