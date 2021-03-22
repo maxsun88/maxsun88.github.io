@@ -17,54 +17,37 @@
         });
     </script>
     <script>
-        $(function() {
-            // For two buttons
-            myStorage = window.sessionStorage;
-            $("#sel1").on('change', function () {
-                myStorage.setItem('sel1', $('option:selected', this).index());
-            });
-            $("#sel2").on('change', function () {
-                myStorage.setItem('sel2', $('option:selected', this).index());
-            });
+        window.onbeforeunload = function() {
+            localStorage.setItem("quantity1", $('#quantity1').val());
+            localStorage.setItem("quantity2", $('#quantity2').val());
 
-            window.onbeforeunload = function () {
-                myStorage.setItem("quantity1", $('#quantity1').val());
-                myStorage.setItem("quantity2", $('#quantity2').val());
-                console.log("onbeforeunload " + localStorage);
-            }
+            console.log("onbeforeunload " +localStorage);
+        }
 
-            window.onload = function () {
-                var quantity1 = myStorage.getItem("quantity1");
-                var quantity2 = myStorage.getItem("quantity2");
-                if (quantity1 !== null) $('#quantity1').val(quantity1);
-                if (quantity2 !== null) $('#quantity2').val(quantity2);
-                if (myStorage.getItem('sel1')) $("#sel1 option").eq(myStorage.getItem('sel1')).prop('selected', true);
-                if (myStorage.getItem('sel2')) $("#sel2 option").eq(myStorage.getItem('sel2')).prop('selected', true);
-                cartPrice();
-            }
-        });
+        window.onload = function() {
+            var quantity1 = localStorage.getItem("quantity1");
+            console.log("onload " + quantity1);
 
+            var quantity2 = localStorage.getItem("quantity2");
+            console.log("onload " + quantity2);
+            if (quantity1 !== null) $('#quantity1').val(quantity1);
+            if (quantity2 !== null) $('#quantity2').val(quantity2);
+        }
     </script>
-
-<script>
-    function cartPrice(){
-        var x=document.getElementsByClassName('price');
-        var i;
-        var sum=0.0;
-        for(i=0;i<x.length;i++){
-            sum += parseFloat(x[i].innerHTML.substring(1));
+    <script>
+        function productPrice(){
+            var x=document.getElementsByClassName('weight');
+            var y=document.getElementsByClassName('price-per-kg');
+            var z=new Array(x.length);
+            var i=0;
+            for (i;i<z.length;i++){
+                x[i]=parseInt(x[i]);
+                y[i]=parseFloat(y[i].subtring(1));
+                z[i]=x[i]*y[i]*localStorage.getItem("quantity"+i);
+                document.getElementById("summary"+i).innerHTML="$"+z[i];
+            }
         }
-        var gst=sum*0.05;
-        var qst=sum*0.15;
-        var total=sum+gst+qst;
-    
-        document.getElementById("subtotal").innerHTML="$"+sum.toFixed(2);
-        document.getElementById("gst").innerHTML="$"+gst.toFixed(2);
-        document.getElementById("qst").innerHTML="$"+qst.toFixed(2);
-        document.getElementById("total").innerHTML="$"+total.toFixed(2);
-        }
-</script>
-    
+    </script>
     <title>Sanitas Shopping Cart</title>
 </head>
 <body>
@@ -94,25 +77,20 @@
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <h5>Banana</h5>
-                                    <p class="mb-2 text-muted text-uppercase small">190g avg.</p>
-                                    <p class="mb-2 text-muted text-uppercase small">$1.74 /kg</p>
-                                    <p class="mb-2 text-muted text-uppercase small">$0.79 /lb</p>
+                                    <p class="mb-2 text-muted text-uppercase small weight">190g avg.</p>
+                                    <p class="mb-2 text-muted text-uppercase small price-per-kg">$1.74 /kg</p>
+                                    <p class="mb-2 text-muted text-uppercase small price-per-lb">$0.79 /lb</p>
                                 </div>
                                 <div>
                                     <div class="def-number-input number-input safari_only mb-0 w-100">
                                         <input class="form-control" class="quantity" min="1" id="quantity1" name="quantity" value="7" type="number">
-                                        <select class="form-control my-2" id="sel1">
-                                            <option value="data4">Brazil</option>
-                                            <option value="data5">Mexico</option>
-                                            <option value="data6">Malaysia</option>
-                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-between align-items-center"></div>
                             <div>
                                 <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3 mb-4"> Remove item </a>
-                                <p class="mb-0"><span><strong class="price">$2.31</strong></span></p class="mb-0">
+                                <p class="mb-0"><span><strong id="summary1">$2.31</strong></span></p class="mb-0">
                             </div>
                         </div>
                     </div>
@@ -131,18 +109,13 @@
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <h5>Grapes</h5>
-                                    <p class="mb-2 text-muted text-uppercase small">A bag is 1000G</p>
-                                    <p class="mb-2 text-muted text-uppercase small">$6.59 /kg</p>
-                                    <p class="mb-2 text-muted text-uppercase small">$22.99 /lb</p>
+                                    <p class="mb-2 text-muted text-uppercase small weight">A bag is 1000G</p>
+                                    <p class="mb-2 text-muted text-uppercase small price-per-kg">$6.59 /kg</p>
+                                    <p class="mb-2 text-muted text-uppercase small price-per-lb">$22.99 /lb</p>
                                 </div>
                                 <div>
                                     <div class="def-number-input number-input safari_only mb-0 w-100">
                                         <input class="form-control" class="quantity" min="1" id="quantity2" name="quantity" value="2" type="number">
-                                        <select class="form-control my-2" id="sel2">
-                                            <option value="data4">Brazil</option>
-                                            <option value="data5">Mexico</option>
-                                            <option value="data6">Malaysia</option>
-                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +126,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <p class="mb-0"><span><strong class="price">$6.60</strong></span></p class="mb-0">
+                            <p class="mb-0"><span><strong id="summary2">$6.60</strong></span></p class="mb-0">
                         </div>
                     </div>
                 </div>
@@ -187,15 +160,15 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                         Amount before taxes
-                        <span id="subtotal">$0</span>
+                        <span id="subtotal">$8.91</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                         GST (5%)
-                        <span id="gst">$0</span>
+                        <span id="gst">$0.45</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                         QST (10%)
-                        <span id="qst">$0</span>
+                        <span id="qst">$0.89</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                         <div>
@@ -204,7 +177,7 @@
                                 <p class="mb-0">(including GST & QST)</p>
                             </strong>
                         </div>
-                        <span><strong id="total">$0</strong></span>
+                        <span id="total"><strong>$10.25</strong></span>
                     </li>
                 </ul>
                 <button type="button" class="btn btn-primary btn-block">Checkout</button>
