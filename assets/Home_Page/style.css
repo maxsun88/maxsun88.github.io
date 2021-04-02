@@ -1,21 +1,6 @@
 /*
 Ryan's CSS Aisles
 */
-
-#aisles{
-  padding: 0% 10%;
-}
-
-.aisle-card{
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.aisle-card img{
-  width: auto;
-  height: 400px;
-}
-
 .products tr {
   display: flex;
   flex-wrap: wrap;
