@@ -1,6 +1,4 @@
-/*
-    DEMO STYLE
-*/
+
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
@@ -133,7 +131,9 @@ ul.CTAs a {
     margin-bottom: 5px;
 }
 
-
+.management-table{
+    min-width: 1000px;
+}
 
 /* ---------------------------------------------------
     Form Style
@@ -153,6 +153,8 @@ ul.CTAs a {
 #content.active {
     width: 100%;
 }
+
+
 
 
 /* ---------------------------------------------------
