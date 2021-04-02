@@ -1,0 +1,40 @@
+#topHeader{
+    border-bottom: 1px solid #ebebeb;
+    background-color: ghostwhite;
+
+}
+#topHeader a{
+    color: #080808;
+    font-weight: 600;
+    font-size: 0.89rem;
+}
+#bottomHeader{
+    border-bottom: 1px solid #ebebeb;
+}
+
+nav ul li a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.log-in{
+    text-align: end;
+}
+
+.cart-sm{
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .contact{
+        display: none;
+    }
+    .cart-lg{
+        display: none;
+    }
+    .cart-sm{
+        display: inline;
+    }
+}
+
