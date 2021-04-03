@@ -40,8 +40,8 @@
             var totalPerProductList=new Array(pricePerUnitList.length);
             var i=0;
             for (i;i<totalPerProductList.length;i++){
-                pricePerUnitList[i]=parseFloat(pricePerUnitList[i].substring(1));
-                totalPerProductList[i]=pricePerUnitList[i]*getElementbyId('quantity'+i).value;
+                pricePerUnitList[i]=parseFloat(pricePerUnitList[i].toString().substring(1));
+                totalPerProductList[i]=pricePerUnitList[i]*document.getElementById(('quantity'+i).toString()).value;
                 document.getElementById("summary"+i).innerHTML="$"+totalPerProductList[i];
             }
         }
