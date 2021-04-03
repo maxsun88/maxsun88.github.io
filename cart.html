@@ -49,27 +49,29 @@
             var totalPerProductList=new Array(pricePerUnitList.length);
             var i=0;
             for (i;i<totalPerProductList.length;i++){
-                pricePerUnitList[i]=parseFloat(pricePerUnitList[i].toString().substring(1));
-                totalPerProductList[i]=pricePerUnitList[i]*document.getElementById(('quantity'+i).toString()).value;
-                document.getElementById("summary"+i).innerHTML="$"+totalPerProductList[i];
+                pricePerUnitList[i].innerHTML = parseFloat(pricePerUnitList[i].innerHTML.substring(1));
+                totalPerProductList[i]=pricePerUnitList[i].innerHTML * document.getElementById(('quantity'+i)).value;
+                console.log(totalPerProductList[i]);
+                document.getElementById("summary"+i).innerHTML="$"+totalPerProductList[i].toFixed(2);
             }
+            cartPrice();
         }
         
         function cartPrice(){
-        var x=document.getElementsByClassName('price');
-        var i;
-        var sum=0.0;
-        for(i=0;i<x.length;i++){
-            sum += parseFloat(x[i].innerHTML.substring(1));
-        }
-        var gst=sum*0.05;
-        var qst=sum*0.15;
-        var total=sum+gst+qst;
+            var x=document.getElementsByClassName('price');
+            var i;
+            var sum=0.0;
+            for(i=0;i<x.length;i++){
+                sum += parseFloat(x[i].innerHTML.substring(1));
+            }
+            var gst=sum*0.05;
+            var qst=sum*0.15;
+            var total=sum+gst+qst;
 
-        document.getElementById("subtotal").innerHTML="$"+sum.toFixed(2);
-        document.getElementById("gst").innerHTML="$"+gst.toFixed(2);
-        document.getElementById("qst").innerHTML="$"+qst.toFixed(2);
-        document.getElementById("total").innerHTML="$"+total.toFixed(2);
+            document.getElementById("subtotal").innerHTML="$"+sum.toFixed(2);
+            document.getElementById("gst").innerHTML="$"+gst.toFixed(2);
+            document.getElementById("qst").innerHTML="$"+qst.toFixed(2);
+            document.getElementById("total").innerHTML="$"+total.toFixed(2);
         }
     </script>
     <title>Sanitas Shopping Cart</title>
@@ -107,7 +109,7 @@
                                 </div>
                                 <div>
                                     <div class="def-number-input number-input safari_only mb-0 w-100">
-                                        <input class="form-control" class="quantity" min="1" id="quantity1" name="quantity" value="7" type="number" onclick="productPrice()">
+                                        <input class="form-control" class="quantity" min="1" id="quantity0" name="quantity" value="7" type="number" onclick="productPrice()">
                                         <select class="form-control my-2" id="sel1">
                                             <option value="data4">Brazil</option>
                                             <option value="data5">Mexico</option>
@@ -119,7 +121,7 @@
                             <div class="d-flex justify-content-between align-items-center"></div>
                             <div>
                                 <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3 mb-4"> Remove item </a>
-                                <p class="mb-0"><span><strong id="summary1">$2.31</strong></span></p class="mb-0">
+                                <p class="mb-0"><span><strong class="price" id="summary0">$2.31</strong></span></p class="mb-0">
                             </div>
                         </div>
                     </div>
@@ -144,7 +146,7 @@
                                 </div>
                                 <div>
                                     <div class="def-number-input number-input safari_only mb-0 w-100">
-                                        <input class="form-control" class="quantity" min="1" id="quantity2" name="quantity" value="2" type="number" onclick="productPrice()">
+                                        <input class="form-control" class="quantity" min="1" id="quantity1" name="quantity" value="2" type="number" onclick="productPrice()">
                                         <select class="form-control my-2" id="sel2">
                                             <option value="data4">Brazil</option>
                                             <option value="data5">Mexico</option>
@@ -160,7 +162,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <p class="mb-0"><span><strong id="summary2">$6.60</strong></span></p class="mb-0">
+                            <p class="mb-0"><span><strong class="price" id="summary1">$6.60</strong></span></p class="mb-0">
                         </div>
                     </div>
                 </div>
