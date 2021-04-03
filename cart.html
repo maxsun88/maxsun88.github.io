@@ -49,9 +49,7 @@
             var totalPerProductList=new Array(pricePerUnitList.length);
             var i=0;
             for (i;i<totalPerProductList.length;i++){
-                pricePerUnitList[i].innerHTML = parseFloat(pricePerUnitList[i].innerHTML.substring(1));
-                totalPerProductList[i]=pricePerUnitList[i].innerHTML * document.getElementById(('quantity'+i)).value;
-                console.log(totalPerProductList[i]);
+                totalPerProductList[i]= parseFloat(pricePerUnitList[i].innerHTML.substring(1)) * document.getElementById(('quantity'+i)).value;
                 document.getElementById("summary"+i).innerHTML="$"+totalPerProductList[i].toFixed(2);
             }
             cartPrice();
