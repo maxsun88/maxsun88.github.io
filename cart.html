@@ -28,16 +28,16 @@
             });
 
             window.onbeforeunload = function () {
+                myStorage.setItem("quantity0", $('#quantity0').val());
                 myStorage.setItem("quantity1", $('#quantity1').val());
-                myStorage.setItem("quantity2", $('#quantity2').val());
                 console.log("onbeforeunload " + localStorage);
             }
 
             window.onload = function () {
-                var quantity1 = myStorage.getItem("quantity1");
-                var quantity2 = myStorage.getItem("quantity2");
-                if (quantity1 !== null) $('#quantity1').val(quantity1);
-                if (quantity2 !== null) $('#quantity2').val(quantity2);
+                var quantity1 = myStorage.getItem("quantity0");
+                var quantity2 = myStorage.getItem("quantity1");
+                if (quantity1 !== null) $('#quantity0').val(quantity1);
+                if (quantity2 !== null) $('#quantity1').val(quantity2);
                 if (myStorage.getItem('sel1')) $("#sel1 option").eq(myStorage.getItem('sel1')).prop('selected', true);
                 if (myStorage.getItem('sel2')) $("#sel2 option").eq(myStorage.getItem('sel2')).prop('selected', true);
             }
