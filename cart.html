@@ -45,15 +45,13 @@
     </script>
     <script>
         function productPrice(){
-            var x=document.getElementsByClassName('weight');
-            var y=document.getElementsByClassName('price-per-kg');
-            var z=new Array(x.length);
+            var pricePerUnitList=document.getElementsByClassName('price-per-kg');
+            var totalPerProductList=new Array(pricePerUnitList.length);
             var i=0;
-            for (i;i<z.length;i++){
-                x[i]=parseInt(x[i]);
-                y[i]=parseFloat(y[i].subtring(1));
-                z[i]=x[i]*y[i]*localStorage.getItem("quantity"+i);
-                document.getElementById("summary"+i).innerHTML="$"+z[i];
+            for (i;i<totalPerProductList.length;i++){
+                pricePerUnitList[i]=parseFloat(pricePerUnitList[i].substring(1));
+                totalPerProductList[i]=pricePerUnitList[i]*getElementbyId('quantity'+i).value;
+                document.getElementById("summary"+i).innerHTML="$"+totalPerProductList[i];
             }
         }
     </script>
@@ -92,7 +90,7 @@
                                 </div>
                                 <div>
                                     <div class="def-number-input number-input safari_only mb-0 w-100">
-                                        <input class="form-control" class="quantity" min="1" id="quantity1" name="quantity" value="7" type="number">
+                                        <input class="form-control" class="quantity" min="1" id="quantity1" name="quantity" value="7" type="number" onclick="productPrice()">
                                         <select class="form-control my-2" id="sel1">
                                             <option value="data4">Brazil</option>
                                             <option value="data5">Mexico</option>
@@ -129,7 +127,7 @@
                                 </div>
                                 <div>
                                     <div class="def-number-input number-input safari_only mb-0 w-100">
-                                        <input class="form-control" class="quantity" min="1" id="quantity2" name="quantity" value="2" type="number">
+                                        <input class="form-control" class="quantity" min="1" id="quantity2" name="quantity" value="2" type="number" onclick="productPrice()">
                                         <select class="form-control my-2" id="sel2">
                                             <option value="data4">Brazil</option>
                                             <option value="data5">Mexico</option>
