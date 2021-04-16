@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user>
+    <login>
+      <email>Robin_lb@hotmail.com</email>
+      <password>Password</password>
+      <admin>True</admin>
+    </login>
+    <personal>
+      <title>Mr.</title>
+      <firstName>Robin</firstName>
+      <lastName>Laliberté-Beaupré</lastName>
+      <streetAddress>6 road street</streetAddress>
+      <city>New Town</city>
+      <postalCode>J5J 5J5</postalCode>
+    </personal>
+  </user>
+  <user>
+    <login>
+      <email>Jane_Doe@Email.com</email>
+      <password>Password1234</password>
+      <admin>False</admin>
+    </login>
+    <personal>
+      <title>Miss</title>
+      <firstName>Jane</firstName>
+      <lastName>Doe</lastName>
+      <streetAddress>6 Road Street</streetAddress>
+      <city>New Town</city>
+      <postalCode>A1A 1A1</postalCode>
+    </personal>
+  </user>
+</users>

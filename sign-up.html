@@ -29,38 +29,38 @@
 		<br /><h2> Sign-up </h3> <br />
 		<h4> Personal information </h4> <br />
 			
-			<form action ="">
+			<form action ="sign-up.php" method="post" class="needs-validation">
 				<div class="row mb-4">
 					<div class="col-sm-2"> 
-						<label for="title"> Title: </label> <br /> 
-						<select class="form-control" name="title">
-							<option> Mr. </option>
-							<option> Mrs. </option>
-							<option> Miss </option>
-							<option> Ms. </option>
+						<label for="titleForm"> Title: </label> <br /> 
+						<select class="form-control" name="titleForm">
+							<option value="Mr."> Mr. </option>
+							<option value="Mrs."> Mrs. </option>
+							<option value="Miss"> Miss </option>
+							<option value="Ms."> Ms. </option>
 						</select> 
 					</div>
 					<div class="col-sm-4" > 
 						<label for="firstName"> First Name: </label> <br /> 
-						<input type = "text" class="form-control" name = "firstName" size="50"/> 
+						<input type = "text" class="form-control" name = "firstName" size="50" required> 
 					</div>
 					<div class="col-sm-6"> 
 						<label for="lastName"> Last Name: </label> <br /> 
-						<input type = "text" class="form-control" name = "lastName" size="50"/> 
+						<input type = "text" class="form-control" name = "lastName" size="50" required> 
 					</div>
 				</div>
 				<div class="row mb-4 mt-4">
 					<div class="col-sm-6"> 
-						<label for="streetAdress"> <div class="text-nowrap"> Street Address: </div> </label> <br /> 
-						<input type = "text" class="form-control" name = "adress" size="50"/> 
+						<label for="streetAddress"> <div class="text-nowrap"> Street Address: </div> </label> <br /> 
+						<input type = "text" class="form-control" name = "streetAddress" size="50" required> 
 					</div>
 					<div class="col-sm-3"> 
 						<label for="city"> City: </label> <br /> 
-						<input class="form-control" type = "text" name = "city" size="20"/> 
+						<input class="form-control" type = "text" name = "city" size="20"required> 
 					</div>
 					<div class="col-sm-3"> 
 						<label for="postalCode"> <div class="text-nowrap"> Postal Code: </div> </label> <br /> 
-						<input type="text" class="form-control"name="postalCode" size="20"/> 
+						<input type="text" class="form-control" name="postalCode" size="20" required> 
 					</div>
 				</div>
 				
@@ -71,33 +71,31 @@
 				
 				<div class="row mb-4">
 					<div class="col-sm-6"> 
-						<label for="emailAdress"> <div class="text-nowrap"> Email Address: </div> </label> <br /> 
-						<input type="text" class="form-control" name="emailAdress" size="100"> 
+						<label for="emailAddress"> <div class="text-nowrap"> Email Address: </div> </label> <br /> 
+						<input type="text" class="form-control" name="emailAddress" size="100" required> 
 					</div>
 					<div class="col-sm-6"> 
-						<label for="confirmEmailAdress"> <div class="text-nowrap"> Confirm your Email Address: </div> </label> <br /> 
-						<input type="text" class="form-control" name="confirmEmailAdress" size="100"> 
+						<label for="confirmEmailAddress"> <div class="text-nowrap"> Confirm your Email Address: </div> </label> <br /> 
+						<input type="text" class="form-control" name="confirmEmailAddress" size="100" required> 
 					</div>
 				</div>
 				<div class="row mt-4">
 					<div class="col-sm-6"> 
-						<label for="password"> 
-							<a href="javascript:;" data-toggle="popover" data-placement="right" data-trigger="focus" title="Password conditions" data-content="Password must contain at least 8 letters.">Password: </a>
-						</label> <br /> 
-						<input type="password" class="form-control" name="password" size="100"/>
+						<label for="password"> <div class="text-nowrap">Password: </div> </label> <br /> 
+						<input type="password" class="form-control" name="password" size="100" required>
 					</div>
 					<div class="col-sm-6"> 
 						<label for="confirmPassword"> <div class="text-nowrap"> Confirm your Password: </div> </label> <br /> 
-						<input type="password" class="form-control" name="confirmPassword" size="100"/> 
+						<input type="password" class="form-control" name="confirmPassword" size="100" required> 
 					</div>
 				</div>
 				<br /> <hr /> <br />
 				<div class="form-check">
 					<label class="form-check-label:">
-						<input type="checkbox" class="form-check-input" value=""> I agree to the terms and conditions.
+						<input type="checkbox" class="form-check-input" value="" required> I agree to the terms and conditions.
 					</label>
 				</div> <br />
-				<input type="button" class="btn btn-outline-secondary" value="Submit Information" />
+				<input type="submit" class="btn btn-outline-secondary" name="submit" value="Submit Information">
 			</form>
 			<br />
 		</div>
