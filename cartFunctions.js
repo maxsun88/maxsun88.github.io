@@ -11,29 +11,13 @@ function cartFunction(){
 		button.addEventListener('click', removeItem);
 	}
 	
-	var addToCartButtons = document.getElementsByClassName('cart-add-btn');
-	for (var i = 0; i < addToCartButtons.length; i++){
-		var button = addToCartButtons[i];
-		button.addEventListener('click', addToCartButton);
-	}
-	
 	document.getElementsByClassName('purchase-btn')[0].addEventListener('click', purchaseClicked);
 }
 
 function removeItem(event){
 	var buttonClicked = event.target;
-	buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
+	buttonClicked.parentElement.parentElement.parentElement.remove();
 	cartPrice();
-}
-
-function addToCartButton(event){
-	var button = event.target;
-	var item = button.parentElement.parentElement;
-	var title = item.getElementsByClassName('p-name')[0].innerHTML;
-	var price = parseFloat(item.getElementsByClassName('price')[0].innerHTML.substring(1));
-	var image = item.getElementsByClassName('img')[0].src;
-	var amount = isNaN(item.getElementByClassName('p-quantity')[0].value) ? 1 : (item.getElementByClassName('')[0].value);
-	setProductCookie(title, price, image, amount);
 }
 
 function addItemsToCart(){
@@ -77,7 +61,7 @@ function addItemsToCart(){
 				<div class="d-flex justify-content-between align-items-center"></div>
 				<div>
 					<a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3 mb-4"> Remove item </a>
-					<p class="mb-0"><span><strong class="price" id="summary${i}">${price}</strong></span></p class="mb-0">
+					<p class="mb-0"><span><strong class="price" id="summary${i}">"$"${price*amount}</strong></span></p class="mb-0">
 				</div>
 			</div>
 		</div>
@@ -89,19 +73,6 @@ function addItemsToCart(){
 	}
 	productPrice();
 }
-
-function setProductCookie(title, price, image, amount) {
-	var cookies = getProductCookies();
-	if (cookies.length == 0){
-		document.cookie = "product=" + title + "," + price + "," + image + "," + amount + "]";
-		return ;
-	}
-	if (cookies.contains(title)){
-		alert("This item is already in your cart.")
-		return ;
-	}
-	document.cookie.product = document.cookie.product + title + "," + price + "," + image + "," + amount + "]";
-  }
 
   function getProductCookie() {
 	var productList = [];
@@ -132,8 +103,8 @@ function productPrice(){
 	var totalPerProductList=new Array(pricePerUnitList.length);
 	var i=0;
 	for (i;i<totalPerProductList.length;i++){
-		totalPerProductList[i]= parseFloat(pricePerUnitList[i].innerHTML.substring(1)) * document.getElementById(('quantity'+i)).value;
-		document.getElementById("summary"+i).innerHTML="$"+totalPerProductList[i].toFixed(2);
+		totalPerProductList[i]= parseFloat(pricePerUnitList[i].innerText.substring(1)) * document.getElementById(('quantity'+i)).value;
+		document.getElementById("summary"+i).innerText="$"+totalPerProductList[i].toFixed(2);
 	}
 	cartPrice();
 }
@@ -143,14 +114,14 @@ function cartPrice(){
 	var i;
 	var sum=0.0;
 	for(i=0;i<productPriceList.length;i++){
-		sum += parseFloat(productPriceList[i].innerHTML.substring(1));
+		sum += parseFloat(productPriceList[i].innerText.substring(1));
 	}
 	var gst=sum*0.05;
 	var qst=sum*0.15;
 	var total=sum+gst+qst;
 
-	document.getElementById("subtotal").innerHTML="$"+sum.toFixed(2);
-	document.getElementById("gst").innerHTML="$"+gst.toFixed(2);
-	document.getElementById("qst").innerHTML="$"+qst.toFixed(2);
-	document.getElementById("total").innerHTML="$"+total.toFixed(2);
+	document.getElementById("subtotal").innerText="$"+sum.toFixed(2);
+	document.getElementById("gst").innerText="$"+gst.toFixed(2);
+	document.getElementById("qst").innerText="$"+qst.toFixed(2);
+	document.getElementById("total").innerText="$"+total.toFixed(2);
 }
