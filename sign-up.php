@@ -36,7 +36,18 @@
             $users_doc->preserveWhiteSpace = false;
             $users_doc->formatOutput = true;
             $users_doc->load("users.xml");
-            print $users_doc->saveXML();
+            
+            $users = $users_doc->getElementsByTagName('user');
+
+            foreach ($users AS $element)
+            {
+                $login_info = $element->getElementsByTagName('login')->item(0);
+                if(strcasecmp($emailAddress, $login_info->getElementsByTagName('email')->item(0)->nodeValue) == 0)
+                {
+                    echo "<script>alert('Email address already in use.'); document.location='sign-up.html'</script>";
+                    exit();
+                }
+            }
 
             $new_user = $users_doc->createElement("user");
             $new_login = $users_doc->createElement("login");

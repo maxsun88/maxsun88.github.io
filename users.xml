@@ -4,7 +4,7 @@
     <login>
       <email>Robin_lb@hotmail.com</email>
       <password>Password</password>
-      <admin>True</admin>
+      <admin>False</admin>
     </login>
     <personal>
       <title>Mr.</title>
@@ -17,17 +17,17 @@
   </user>
   <user>
     <login>
-      <email>Jane_Doe@Email.com</email>
-      <password>Password1234</password>
-      <admin>False</admin>
+      <email>Admin@Sanitas.com</email>
+      <password>Password</password>
+      <admin>true</admin>
     </login>
     <personal>
-      <title>Miss</title>
-      <firstName>Jane</firstName>
-      <lastName>Doe</lastName>
-      <streetAddress>6 Road Street</streetAddress>
-      <city>New Town</city>
-      <postalCode>A1A 1A1</postalCode>
+      <title></title>
+      <firstName></firstName>
+      <lastName></lastName>
+      <streetAddress></streetAddress>
+      <city></city>
+      <postalCode></postalCode>
     </personal>
   </user>
 </users>
