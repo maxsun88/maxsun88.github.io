@@ -26,7 +26,7 @@ function addItemsToCart(){
 		return;
 	}
 	var cartRow = document.createElement('div');
-	var carItems = document.getElementByClassName('cart-items')[0];
+	var cartItems = document.getElementByClassName('cart-items')[0];
 	for (var i = 0; i < productList.length; i++){
 		var cartRowContent = ` <div class="row mb-4">
 								<div class="col-md-5 col-lg-3 col-xl-3">
