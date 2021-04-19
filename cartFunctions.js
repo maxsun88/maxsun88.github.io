@@ -75,16 +75,15 @@ function addItemsToCart(){
 }
 
   function getProductCookie() {
+	var storedProducts = window.sessionStorage.getItem("product");
 	var productList = [];
-	var name = "product=";
-	if (!document.cookie.contains(name)){
+	if (!storedProducts){
 		return "";
 	}
-	var decodedCookie = decodeURIComponent(document.cookie).substring(indexOf(name));
-	var ca = decodedCookie.split(']');
+	storedProducts = storedProcuts.split(']');
 	for(var i = 0; i <ca.length; i++) {
-	  ca[i].split(",");
-	  productList.push(ca[i]);
+	  storedProducts[i].split(",");
+	  productList.push(storedProducts[i]);
 	}
 	return productList;
   }
