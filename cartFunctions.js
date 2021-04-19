@@ -44,6 +44,7 @@ function addItemsToCart(){
 												<h5>${productList[i][0]}</h5>
 												<p class="mb-2 text-muted text-uppercase small weight">190g avg.</p>
 												<p class="mb-2 text-muted text-uppercase small price-per-kg">${productList[i][1]} /kg</p>
+												<p class="mb-2 text-muted text-uppercase small price-per-lb">$${(productList[i][1]*2.20462).toFixed(2)} /lb</p>
 											</div>
 											<div>
 												<div class="def-number-input number-input safari_only mb-0 w-100">
@@ -59,7 +60,7 @@ function addItemsToCart(){
 										<div class="d-flex justify-content-between align-items-center"></div>
 											<div>
 												<a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3 mb-4"> Remove item </a>
-												<p class="mb-0"><span><strong class="price" id="summary${i}">"$"${price*amount}</strong></span></p class="mb-0">
+												<p class="mb-0"><span><strong class="price" id="summary${i}">"$"${(productList[i][1]*productList[i][3]).toFixed(2)}</strong></span></p class="mb-0">
 											</div>
 										</div>
 									</div>
